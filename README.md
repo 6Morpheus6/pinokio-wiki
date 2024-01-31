@@ -1,24 +1,28 @@
-# Pinokio Wiki
 
-- [Pinokio Wiki](#pinokio-wiki)
-  - [General](#general)
-    - [Change the location where Apps are downloaded and installed (Home)](#change-the-location-where-apps-are-downloaded-and-installed-home)
-    - [Install Apps with Pinokio](#install-apps-with-pinokio)
-    - [Delete installed Apps](#delete-installed-apps)
-    - [Upgrade Pinokio](#upgrade-pinokio)
-    - [Uninstall Pinokio](#uninstall-pinokio)
-  - [Pinokio](#pinokio)
-    - [Home Screen](#home-screen)
-    - [Settings](#settings)
-    - [Discover Page](#discover-page)
-    - [Application screen](#application-screen)
-      - [Launching the App](#launching-the-app)
-      - [Terminal](#terminal)
-      - [Update, Reinstall and Factory Reset](#update-reinstall-and-factory-reset)
-      - [Files](#files)
-  - [Applications](#applications)
-    - [Stable Diffusion Models](#stable-diffusion-models)
-    - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
+
+
+
+
+
+
+- [General](#general)
+  - [Change the location where Apps are downloaded and installed (Home)](#change-the-location-where-apps-are-downloaded-and-installed-home)
+  - [Install Apps with Pinokio](#install-apps-with-pinokio)
+  - [Delete installed Apps](#delete-installed-apps)
+  - [Upgrade Pinokio](#upgrade-pinokio)
+  - [Uninstall Pinokio](#uninstall-pinokio)
+- [Pinokio](#pinokio)
+  - [Home Screen](#home-screen)
+  - [Settings](#settings)
+  - [Discover Page](#discover-page)
+  - [Application screen](#application-screen)
+    - [Launching the App](#launching-the-app)
+    - [Terminal](#terminal)
+    - [Update, Reinstall and Factory Reset](#update-reinstall-and-factory-reset)
+    - [Files](#files)
+- [Applications](#applications)
+  - [Stable Diffusion Models](#stable-diffusion-models)
+  - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
 
 ## General
 
