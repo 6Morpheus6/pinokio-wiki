@@ -86,7 +86,7 @@ The settings page displays the currently installed Pinokio version and can be re
 Here you can:
 
 - Change the color theme
-- [Change the location of your Home directory](./HowTo.md#change-the-location-where-apps-are-downloaded-and-installed-home)
+- [Change the location of your Home directory](#change-the-location-where-apps-are-downloaded-and-installed-home)
 
 ### Discover Page
 
