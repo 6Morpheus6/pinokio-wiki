@@ -19,6 +19,20 @@
   - [Applications](#applications)
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
+  - [Requirements](#requirements)
+    - [Stable Diffusion](#stable-diffusion)
+      - [**Supported Systems**](#supported-systems)
+      - [**Minimal Requirements**](#minimal-requirements)
+    - [Fooocus](#fooocus)
+    - [ComfyUI](#comfyui)
+      - [**Supported Systems**](#supported-systems-1)
+      - [**Minimal Requirements**](#minimal-requirements-1)
+    - [InstantID](#instantid)
+      - [**Supported Systems**](#supported-systems-2)
+      - [**Minimal Requirements**](#minimal-requirements-2)
+    - [IP-Adapter-FaceID](#ip-adapter-faceid)
+      - [**Supported Systems**](#supported-systems-3)
+      - [**Minimal Requirement**](#minimal-requirement)
 
 ## General
 
@@ -145,3 +159,55 @@ Download it into:  `.\pinokio\drive\drives\peers\d1704581225212\checkpoints`
 
 Back in Stable Diffusion WebUI click the blue refresh button at the top left corner beside the *models dropdown menu*.  
 After that you can choose your model from that dropdown menu.
+
+## Requirements
+
+### Stable Diffusion
+
+#### **Supported Systems**
+
+- Window, Linux - NVIDIA, AMD, CPU
+- Apple (Silicon) - MPS
+- Intel Mac - CPU
+
+#### **Minimal Requirements**
+
+- Stable Diffusion SD1.5 Models: NVIDIA 4GB VRAM, 16GB RAM  
+- Stable Diffusion SDXL Models: NVIDIA 8GB VRAM, 24 RAM
+
+### Fooocus
+
+- See [Fooocus Minimal Requirements](https://github.com/lllyasviel/Fooocus?tab=readme-ov-file#minimal-requirement)
+
+### ComfyUI
+
+#### **Supported Systems**
+
+- Window, Linux - NVIDIA, AMD, CPU
+- Apple (Silicon) - MPS
+- Intel Mac - CPU
+
+#### **Minimal Requirements**
+
+- ComfyUI - SD1.5 Models: NVIDIA 4GB VRAM, 16GB RAM  
+- ComfyUI - SDXL Models: NVIDIA 8GB VRAM, 24 RAM
+
+### InstantID
+
+#### **Supported Systems**
+
+- Window, Linux - NVIDIA
+
+#### **Minimal Requirements**
+
+- NVIDIA 12 GB VRAM
+
+### IP-Adapter-FaceID
+
+#### **Supported Systems**
+
+- Window, Linux - NVIDIA
+
+#### **Minimal Requirement**
+
+- NVIDIA 8 GB VRAM
