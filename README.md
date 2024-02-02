@@ -7,6 +7,7 @@
     - [Delete installed Apps](#delete-installed-apps)
     - [Upgrade Pinokio](#upgrade-pinokio)
     - [Uninstall Pinokio](#uninstall-pinokio)
+    - [Model and File Management](#model-and-file-management)
   - [Pinokio](#pinokio)
     - [Home Screen](#home-screen)
     - [Settings](#settings)
@@ -33,6 +34,9 @@
     - [IP-Adapter-FaceID](#ip-adapter-faceid)
       - [**Supported Systems**](#supported-systems-3)
       - [**Minimal Requirement**](#minimal-requirement)
+    - [Video2Densepose](#video2densepose)
+      - [**Supported Systems**](#supported-systems-4)
+      - [**Minimal Requirements**](#minimal-requirements-3)
 
 ## General
 
@@ -79,6 +83,28 @@ On Windows it is located in: `C:\Users\YourName\AppData\Programs\Pinokio`
 On a Mac it is in: `~% / Applications/`  
 This will only uninstall Pinokio ***not*** your Apps. Your Home directory will stay ***untouched***.  
 To remove Pinokio and all its components completely from your system, you need to delete the `pinokio` folder of your home directory as well. Additionally you can search for *Pinokio* with your Explorer and delete everything you find.
+
+### Model and File Management
+
+- Pinokio will be installed in
+  - `C:\Users\YourName\AppData\Programs\Pinokio` on Windows  
+  - `~% / Applications/` on Mac
+- Applications will be installed in `.\pinokio\api`
+  - Each App has their very own Outputs and models folder.
+    - Output folder houses all generated files
+    - Models are stored in the Models / Checkpoints folder  
+
+>Note: If you delete an Application or click the ***Factory Reset*** Button, the Output and Models folder will be deleted as well.  
+**Make sure to save any important *Output Files* and *Models* before you delete an App!**
+
+- Prerequisites (Conda, git, zip, etc.) will be installed in `.\pinokio\bin\miniconda`
+- The Logs folder `.\pinokio\logs` stores all installation logs, launch protocols and system information needed to troubleshoot issues.  
+  This folder will be automatically zipped when you hit the ***Report Bug Button***.
+- Temporary files are stored in `.pinokio\Cache` e.g. *Pip_Cache* for components, *Temp* and *Gradio_Temp* for intermediate output files.  
+An exception is *HF_Home*. Some Apps download their default models in there when they launch the first time.
+*Principally it is possible to delete all files in the Cache folders, these files will be automatically downloaded if they are needed again.*
+
+> Note: Some of these files, especially models, can be very large and should be kept to save time.
 
 ---
 
@@ -133,13 +159,14 @@ Here you can also stop and restart the App again by clicking the **Stop** / **Ru
 - To update an App, close it if running and click the **Update** button. *This will update the app to the latest version.*  
 - To reinstall an App, close it if running and click **Reinstall**. *This will reinstall the App without deleting any data or creations.*  
 - A **Factory Reset** will delete the App but not the Pinokio scripts. *It will still be displayed on the Pinokio home screen and can be reinstalled any time.*  
-***Note:*** Not all Apps come with an Update, Reinstall or Factory Reset button
+Not all Apps come with an Update, Reinstall or Factory Reset button
 
 #### Files
 
 The Files button leads to the Pinokio scripts, App-folder and subfolders and all containing files. It is even possible to edit and save these files within Pinokio, although it's recommended to use an appropriate Editor or IDE for that purpose.  
 This should only be done if stringently required and done with cautious since a mistake can easily break the App.  
 *It's always wise to make a backup of the original files before modifying them.*
+> **Note: A *Factory Reset will delete all files and folders* in the App folder *including your output and custom models! Always* make sure to *save all important files and models beforehand*!**
 
 ## Applications
 
@@ -147,9 +174,9 @@ This should only be done if stringently required and done with cautious since a 
 
 ### Download different models for Stable Diffusion, Fooocus and ComfyUI
 
-The best place to download finetuned **SD1.5**, **SD2.1** and **SDXL** Models is [Civitai](https://civitai.com).
+If your computer doesn't have enough performance to use SDXL models, you can download finetuned **SD1.5** Models from [Civitai](https://civitai.com).
 Everything there can be downloaded for free. But it's recommended to create a free account to see all available [models](https://civitai.com/models).  
-Filter the displayed models and tools at the top right corner above the images (Symbol right beside the text *Month*). To display only **SD1.5** models click *Checkpoints*, *All* and *SD1.5*.
+Filter the displayed models at the top right corner *("Filters")* to display only **SD1.5** models and check *Checkpoints*, *All* and *SD1.5*.
 Select an image that represents best what you have in mind and click it.
 
 On the following page you can scroll through different pics made with that model.
@@ -209,5 +236,15 @@ After that you can choose your model from that dropdown menu.
 - Window, Linux - NVIDIA
 
 #### **Minimal Requirement**
+
+- NVIDIA 8 GB VRAM
+
+### Video2Densepose
+
+#### **Supported Systems**
+
+- Window, Linux - NVIDIA
+
+#### **Minimal Requirements**
 
 - NVIDIA 8 GB VRAM
