@@ -20,7 +20,7 @@
   - [Applications](#applications)
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
-  - [Requirements](#requirements)
+  - [Requirements (not verified)](#requirements-not-verified)
     - [Stable Diffusion](#stable-diffusion)
       - [**Supported Systems**](#supported-systems)
       - [**Minimal Requirements**](#minimal-requirements)
@@ -37,6 +37,12 @@
     - [Video2Densepose](#video2densepose)
       - [**Supported Systems**](#supported-systems-4)
       - [**Minimal Requirements**](#minimal-requirements-3)
+    - [Audio Gradio](#audio-gradio)
+      - [**Supported Systems**](#supported-systems-5)
+      - [**Minimal Requirements**](#minimal-requirements-4)
+    - [Moore-AnimateAnyone / Moore-AnimateAnyone-Mini](#moore-animateanyone--moore-animateanyone-mini)
+      - [**Supported Systems**](#supported-systems-6)
+      - [**Minimal Requirements**](#minimal-requirements-5)
 
 ## General
 
@@ -163,8 +169,8 @@ Not all Apps come with an Update, Reinstall or Factory Reset button
 
 #### Files
 
-The Files button leads to the Pinokio scripts, App-folder and subfolders and all containing files. It is even possible to edit and save these files within Pinokio, although it's recommended to use an appropriate Editor or IDE for that purpose.  
-This should only be done if stringently required and done with cautious since a mistake can easily break the App.  
+The Files button leads to the Pinokio scripts, App-folder, subfolders and all containing files. It is even possible to edit and save these files within Pinokio, although it is recommended to use an appropriate Editor or IDE for that purpose.  
+This should only be done in exceptional cases and with caution since a mistake can easily break the App.  
 *It's always wise to make a backup of the original files before modifying them.*
 > **Note: A *Factory Reset will delete all files and folders* in the App folder *including your output and custom models! Always* make sure to *save all important files and models beforehand*!**
 
@@ -179,15 +185,15 @@ Everything there can be downloaded for free. But it's recommended to create a fr
 Filter the displayed models at the top right corner *("Filters")* to display only **SD1.5** models and check *Checkpoints*, *All* and *SD1.5*.
 Select an image that represents best what you have in mind and click it.
 
-On the following page you can scroll through different pics made with that model.
-Above these pics you see different versions. Most likely the latest version is the newest and best one.
-Press the *Download* Button right beside the *Create* Button to download your desired model.
-Download it into:  `.\pinokio\drive\drives\peers\d1704581225212\checkpoints`
+On the following page you can scroll through different pictures created with that model.
+Above these images you see different versions of that model. Most likely the latest version is the newest and best one.
+Choose your desired version and press the *Download* Button right beside the *Create* Button to download the model and put it into `.\pinokio\drive\drives\peers\d1704581225212\checkpoints` on your computer.
 
 Back in Stable Diffusion WebUI click the blue refresh button at the top left corner beside the *models dropdown menu*.  
-After that you can choose your model from that dropdown menu.
+After that you can choose your model from that dropdown menu.  
+Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pixel. SD1.5 models are trained on 512px images. Sizes bigger than 800px would lead to errors, mutations, mirror effects or double objects. Common horizontal and vertical formats like 600 x 800 or 768 x 512 work as well.
 
-## Requirements
+## Requirements (not verified)
 
 ### Stable Diffusion
 
@@ -243,8 +249,24 @@ After that you can choose your model from that dropdown menu.
 
 #### **Supported Systems**
 
-- Window, Linux - NVIDIA
+- Window, Linux - NVIDIA only
 
 #### **Minimal Requirements**
 
 - NVIDIA 8 GB VRAM
+
+### Audio Gradio
+
+#### **Supported Systems**
+
+- Window, Linux - NVIDIA only
+
+#### **Minimal Requirements**
+
+### Moore-AnimateAnyone / Moore-AnimateAnyone-Mini
+
+#### **Supported Systems**
+
+- Window, Linux - NVIDIA only
+
+#### **Minimal Requirements**
