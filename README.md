@@ -122,11 +122,20 @@ Here you can:
 
 ### Discover Page
 
-The Discover page in Pinokio allows you to install new Apps. Click on an App's icon to view more details, then click the Download button. In the following window, choose a folder name and click **Download** to download the App with Pinokio.
-All downloaded Apps will be displayed on the Pinokio home screen and can be installed from there.
-> Note: Applications labeled with **VERSION 1** only work with **Pinokio 1.0.15** or higher!
+The Discover page in Pinokio allows you to install new Apps.
 
-Applications not created by a verified publisher and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can be still installed via the Download from URL button on the top of the Discover page.
+- Click on an App's icon to view more details, then click the Download button.
+- In the following window, choose a folder name and click **Download** to download the App with Pinokio.
+
+All downloaded Apps will be displayed on the Pinokio home screen and can be installed from there.
+
+> - Applications labeled with **VERSION 1** only work with **Pinokio 1.0.15** or higher!
+> - Applications labeled with **VERSION 1.1** only work with **Pinokio 1.1.0** or higher!
+
+All needed components will be installed with your first App.  
+**NOTE: It is highly recommended to switch off your antivirus, during this first installation to avoid unnecessary subsequent troubleshooting.**
+
+Applications not created by a verified publisher and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can still be installed with the ***Download from URL*** button at the top of the Discover page.
 *This method can also be used if the normal way to Download an App fails (e.g. because of a notification to update Pinokio although it is still up to date when trying to download an App the regular way on the Discover page).*  
 > Note: Only Applications with a `pinokio.js` and respective *install.json* and *start.json* scripts etc. can be installed via Pinokio.  
 To find out if an Application on GitHub that doesn't appear on the Discover page can be installed with Pinokio, have a look on the GitHub repo and check if it contains a *pinokio.js* script on the main page.  
