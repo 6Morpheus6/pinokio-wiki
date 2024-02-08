@@ -23,6 +23,11 @@
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
   - [Troubleshooting](#troubleshooting)
+    - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
+      - [1.) Uninstalling Visual Studio](#1-uninstalling-visual-studio)
+        - [*(This should only be done if Visual Studio isn't needed by any other program on your computer)*](#this-should-only-be-done-if-visual-studio-isnt-needed-by-any-other-program-on-your-computer)
+      - [2.) Manually add Visual Buildtools to your existing Visual Studios version](#2-manually-add-visual-buildtools-to-your-existing-visual-studios-version)
+      - [3.) Manually install Visual Buildtools](#3-manually-install-visual-buildtools)
   - [Requirements (not verified)](#requirements-not-verified)
     - [Stable Diffusion](#stable-diffusion)
     - [Fooocus](#fooocus)
@@ -202,17 +207,19 @@ Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pix
 
 ## Troubleshooting
 
-Visual Buildtools fails to install on Windows
+### Visual Buildtools fails to install on Windows
 
 If Visual Buildtools fails to install, it often happen to a partly preinstalled version.
 There are 3 ways to fix this:
 
-- 1.) Uninstalling Visual Studio
-  *(This should only be done if Visual Studio isn't needed by any other program on your computer)*
-  - a.) Start the Visual Studio Installer (You find it by typing "Visual" in the search field of your Windows taskbar)
-  - b.) Once it opened, uninstall **all** old Visual Studio versions.
-  - c.) Once finished, close the installer
-  - d.) Run Pinokio and install your app again
+#### 1.) Uninstalling Visual Studio
+
+##### *(This should only be done if Visual Studio isn't needed by any other program on your computer)*
+
+- a.) Start the Visual Studio Installer (You find it by typing "Visual" in the search field of your Windows taskbar)
+- b.) Once opened, uninstall **all** old Visual Studio versions.
+- c.) Once finished, close the installer
+- d.) Run Pinokio and install your app again
   
 1.) a.) Visual Studio Installer  
 ![1.) a.) Visual Studio Installer](Images/visual_taskbar.png "Visual Studio Installer")  
@@ -220,11 +227,14 @@ There are 3 ways to fix this:
 1.) b.) Uninstall old versions  
 ![1.) b.) Uninstall old versions](Images/visual_uninstall.png "Uninstall old versions")  
 
-- 2.) Manually add Visual Buildtools to your existing Visual Studios version
-  - a.) Start the Visual Studio Installer
-  - b.) Click "Modify"
-  - c.) Select "Desktop Development C++" and check all components marked in screenshot 2.) c.)
-  - d.) Click the "Modify" button at the bottom right corner to install the Visual Buildtools
+---
+
+#### 2.) Manually add Visual Buildtools to your existing Visual Studios version
+
+- a.) Start the Visual Studio Installer - *Screenshot 1.) a.)*
+- b.) Click "Modify"
+- c.) Select "Desktop Development C++" and check all components marked in *Screenshot 2.) c.)*
+- d.) Click the "Modify" button at the bottom right corner to install the Visual Buildtools
 
 2.) b.) Modify your Visual Studio installation  
 ![2.) b.) Modify](Images/visual_modify.png "Modify")
@@ -232,11 +242,14 @@ There are 3 ways to fix this:
 2.) c.) Desktop Development C++ and Components  
 ![2.) c.) Components](Images/components.png "Components")
 
-- 3.) Manually install Visual Buildtools
-  - a.) Start the Visual Studio Installer
-  - b.) Click the "Available" tab and choose "Visual Studio Community 2022" and click "Install"
-  - c.) Choose Desktop Development C++ and select all the components marked in screenshot 2.) c.)
-  - d.) Click the "Install" button at the bottom right corner to install the Visual Buildtools
+---
+
+#### 3.) Manually install Visual Buildtools
+
+- a.) Start the Visual Studio Installer - *Screenshot 1.) a.)*
+- b.) Click the "Available" tab and choose "Visual Studio Community 2022" and click "Install"
+- c.) Choose Desktop Development C++ and select all the components marked in *Screenshot 2.) c.)*
+- d.) Click the "Install" button at the bottom right corner to install the Visual Buildtools
 
 3.) b.) Available Tab![3.) b.) Available Tab](Images/available.png "Available Tab")
 
