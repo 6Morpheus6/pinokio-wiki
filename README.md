@@ -23,6 +23,8 @@
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
   - [Troubleshooting](#troubleshooting)
+    - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
+    - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
       - [1.) Uninstalling Visual Studio](#1-uninstalling-visual-studio)
         - [*(This should only be done if Visual Studio isn't needed by any other program on your computer)*](#this-should-only-be-done-if-visual-studio-isnt-needed-by-any-other-program-on-your-computer)
@@ -207,8 +209,41 @@ Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pix
 
 ## Troubleshooting
 
+### git, zip, conda: node.js can't be installed
+
+![git, zip, node - loop](Images/git_zip_node.png "git, zip, node - loop")
+
+There are basically 2 reasons why you might end up in this kind of installation loop.
+
+- Either an antivirus or your firewall is blocking the installation of needed components  
+- Or Pinokio detects a pre-installed Anaconda version and skips the installation of the needed components
+
+  - If there is a pre-installed Anaconda version you don't need, please uninstall it.
+  - Deactivate your antivirus program and firewall.
+  - Delete the `miniconda` folder located in `.\pinokio\bin`
+  - Try to install the App again
+
+Pinokio will now install Miniconda and the other components again properly.
+
+---
+
+### Conda: ffmpeg, cmake can't be installed
+
+![conda:cmake, ffmpeg - loop](Images/cmake.png "conda:cmake, ffmpeg - loop")
+
+A similar loop can occur during the installation of conda:ffmpeg, cmake on Mac, Linux, and sometimes even on Windows.  
+Most likely this fails with the message: *"CondaValueError: You have chosen a non-default solver backend (libmamba) but it was not recognized. Choose one of: classic"*
+
+![libmamba](Images/libmamba.png "libmamba")
+
+This loop occurs for the same reason why git, zip and node.js fails to install.  
+So, the solution is the same as [above.](#git-zip-conda-nodejs-cant-be-installed)
+
+---
+
 ### Visual Buildtools fails to install on Windows
 
+![vs installation loop](Images/vs_insall.png "vs installation loop") ![vs error message](Images/vs_error.png "vs error message")  
 If Visual Buildtools fails to install, it often happen to a partly preinstalled version.
 There are 3 ways to fix this:
 
@@ -252,6 +287,8 @@ There are 3 ways to fix this:
 - d.) Click the "Install" button at the bottom right corner to install the Visual Buildtools
 
 3.) b.) Available Tab![3.) b.) Available Tab](Images/available.png "Available Tab")
+
+---
 
 ## Requirements (not verified)
 
