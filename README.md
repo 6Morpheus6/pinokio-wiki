@@ -24,6 +24,7 @@
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
   - [Troubleshooting](#troubleshooting)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
+    - [git, zip, conda: node.js can't be installed (Edge case: "brotli error")](#git-zip-conda-nodejs-cant-be-installed-edge-case-brotli-error)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
       - [1.) Uninstalling Visual Studio](#1-uninstalling-visual-studio)
@@ -70,7 +71,7 @@ Choose the default folder or set a new name for the App folder and click Install
 
 ### Delete installed Apps
 
-The `api`  folder contains all your installed Apps. Just delete the according app.Pinokio.git folder in your explorer.  
+The `api`  folder contains all your installed Apps. Just delete the according App.Pinokio.git folder in your explorer.  
 To delete an App simply go to `.\pinokio\api` If you don't know where to find this folder, just have a look at Pinokio - Settings (The wheel in the top right corner on the Pinokio main page).  
 Navigate there with your Explorer or File Manager and in there you will see the `api` folder.
 
@@ -95,7 +96,7 @@ To remove Pinokio and all its components completely from your system, you need t
 If you find a bug, if anything isn't working as expected, or if you have issues running an Application, please visit the Pinokio Discord Server and post your issue in the #support channel.
 
 - Describe your issue in [#quick-questions](https://discord.gg/U8X6uPtG3Z) and post a screenshot if possible (quickest way to get help).
-- If you need help with any of the Applications, please visit the [#app-questions](https://discord.gg/5ssuhP5zwh) channel to ask for advice
+- If you need help with any of the Applications, please visit the [#App-questions](https://discord.gg/5ssuhP5zwh) channel to ask for advice
 - Or hit the report bug button at the top right corner on the Pinokio main page and post your logs in the [#forum](https://discord.gg/aHFHh2WSRq) and describe the issue or bug.
 
 ---
@@ -157,7 +158,7 @@ Here you can also stop and restart the App again by clicking the **Stop** / **Ru
 
 #### Update, Reinstall, Factory Reset and Delete
 
-- To update an App, close it if running and click the **Update** button. *This will update the app to the latest version.*  
+- To update an App, close it if running and click the **Update** button. *This will update the App to the latest version.*  
 - To reinstall an App, close it if running and click **Reinstall**. *This will reinstall the App without deleting any data or creations.*  
 - A **Factory Reset** will delete the App but not the Pinokio scripts. *It will still be displayed on the Pinokio home screen and can be reinstalled any time.*  
 Not all Apps come with an Update, Reinstall or Factory Reset button
@@ -236,6 +237,21 @@ Pinokio will now install Miniconda and the other components again properly.
 
 ---
 
+### git, zip, conda: node.js can't be installed (Edge case: "brotli error")
+
+![brotli Traceback Error](Images/brotli_traceback.png "brotli Traceback Error")
+
+If the installation of git, zip, and :node.js fails with the Traceback error: *AttributeError: module 'brotli' has no attribute 'error'*
+like in the screenshot above, then there are some easy steps to fix it:
+
+- Open Anaconda Powershell prompt (miniconda) *Type `Anaconda` in the search field of the Windows taskbar*
+- In Anaconda type `pip install brotli`
+- Once it is finished, start Pinokio and try to install your App again
+
+![How to find Anaconda Powershell Prompt (miniconda)](Images/Anaconda_Powershell.png "How to find Anaconda Powershell Prompt (miniconda)")
+
+---
+
 ### Conda: ffmpeg, cmake can't be installed
 
 ![conda:cmake, ffmpeg - loop](Images/cmake.png "conda:cmake, ffmpeg - loop")
@@ -263,7 +279,7 @@ There are 3 ways to fix this:
 - a.) Start the Visual Studio Installer (You find it by typing "Visual" in the search field of your Windows taskbar)
 - b.) Once opened, uninstall **all** old Visual Studio versions.
 - c.) Once finished, close the installer
-- d.) Run Pinokio and install your app again
+- d.) Run Pinokio and install your App again
   
 1.) a.) Visual Studio Installer  
 ![1.) a.) Visual Studio Installer](Images/visual_taskbar.png "Visual Studio Installer")  
