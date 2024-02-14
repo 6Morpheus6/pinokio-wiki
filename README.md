@@ -22,6 +22,8 @@
   - [Applications](#applications)
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
+  - [FAQ](#faq)
+    - [What does "\* Do NOT use exFAT drives" on the Setting page mean](#what-does--do-not-use-exfat-drives-on-the-setting-page-mean)
   - [Troubleshooting](#troubleshooting)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [git, zip, conda: node.js can't be installed (Edge case: "brotli error")](#git-zip-conda-nodejs-cant-be-installed-edge-case-brotli-error)
@@ -216,6 +218,21 @@ Above these images you see different versions of that model. Most likely the lat
 Back in Stable Diffusion WebUI click the blue refresh button at the top left corner beside the *models dropdown menu*.  
 After that you can choose your model from that dropdown menu.  
 Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pixel. SD1.5 models are trained on 512px images. Sizes bigger than 800px would lead to errors, mutations, mirror effects or double objects. Common horizontal and vertical formats like 600 x 800 or 768 x 512 work as well.
+
+---
+
+## FAQ
+
+### What does "* Do NOT use exFAT drives" on the Setting page mean
+
+![exFAT warning](Images/exfat_warning.png "exFAT warning")
+
+In fact, this is rather a notification than a warning. If your home directory is at the default location on your C drive or any other built in SSD drive, the it is certainly formatted with the NTFS filesystem as supposed to be. exFAT is an old filesystem in times of Win98 and only gets used for external drives.  
+But if you choose to change the location of your home directory, you should check the filesystem on the destined drive beforehand since exFAT is a limited filesystem that doesn't support all features provided by Pinokio and its Applications.
+
+To check the filesystem of a drive, open your explorer, right-click the drive letter and select *Properties*.
+
+![drive menu](Images/drive_menu.png "right-click drive") ![drive properties](Images/drive_properties.png "drive properties")
 
 ## Troubleshooting
 
