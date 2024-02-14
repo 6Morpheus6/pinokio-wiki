@@ -227,10 +227,10 @@ Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pix
 
 ![exFAT warning](Images/exfat_warning.png "exFAT warning")
 
-In fact, this is rather a notification than a warning. If your home directory is at the default location on your C drive or any other built in SSD drive, the it is certainly formatted with the NTFS filesystem as supposed to be. exFAT is an old filesystem in times of Win98 and only gets used for external drives.  
-But if you choose to change the location of your home directory, you should check the filesystem on the destined drive beforehand since exFAT is a limited filesystem that doesn't support all features provided by Pinokio and its Applications.
+Actually, this is more of a notification than a warning. If your home directory is in the default location on your C drive or any other built-in SSD drive, it is expected to be formatted with the NTFS file system. exFAT is an old filesystem from the Win98 era and is only used for external drives today.  
+However, if you decide to change the location of your home directory, you should first check the filesystem on the intended drive because exFAT is a limited filesystem that doesn't support all the features provided by Pinokio and its applications.
 
-To check the filesystem of a drive, open your explorer, right-click the drive letter and select *Properties*.
+To check the file system of a drive, open your Explorer, right-click on the drive letter and select ***Properties***.
 
 ![drive menu](Images/drive_menu.png "right-click drive") ![drive properties](Images/drive_properties.png "drive properties")
 
