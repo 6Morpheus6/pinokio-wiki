@@ -23,7 +23,8 @@
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
   - [FAQ](#faq)
-    - [What does "\* Do NOT use exFAT drives" on the Setting page mean](#what-does--do-not-use-exfat-drives-on-the-setting-page-mean)
+    - [What does "\* Do NOT use exFAT drives" on the Setting page mean?](#what-does--do-not-use-exfat-drives-on-the-setting-page-mean)
+    - [What means "ENOENT: no such file or directory"](#what-means-enoent-no-such-file-or-directory)
   - [Troubleshooting](#troubleshooting)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [git, zip, conda: node.js can't be installed (Edge case: "brotli error")](#git-zip-conda-nodejs-cant-be-installed-edge-case-brotli-error)
@@ -97,9 +98,9 @@ To remove Pinokio and all its components completely from your system, you need t
 
 If you find a bug, if anything isn't working as expected, or if you have issues running an Application, please visit the Pinokio Discord Server and post your issue in the #support channel.
 
-- Describe your issue in [#quick-questions](https://discord.gg/U8X6uPtG3Z) and post a screenshot if possible (quickest way to get help).
-- If you need help with any of the Applications, please visit the [#App-questions](https://discord.gg/5ssuhP5zwh) channel to ask for advice
-- Or hit the report bug button at the top right corner on the Pinokio main page and post your logs in the [#forum](https://discord.gg/aHFHh2WSRq) and describe the issue or bug.
+- Describe your issue in [#quick-questions][ququ] and post a screenshot if possible (quickest way to get help).
+- If you need help with any of the Applications, please visit the [#App-questions][apqu] channel to ask for advice
+- Or hit the ***Report Bug button*** at the top right corner on the Pinokio main page and post your logs in the [#forum][foru] and describe the issue or bug.
 
 ---
 
@@ -188,7 +189,7 @@ This should only be done in exceptional cases and with caution since a mistake c
 
 - The **bin** folder `.\pinokio\bin` contains all required components for Applications. These *pre-requirements* (Conda, git, zip, etc.) will be installed in `.\pinokio\bin\miniconda`
 - The **Logs** folder `.\pinokio\logs` stores all installation logs, launch protocols and system information needed to troubleshoot issues.  
-  This folder will be automatically zipped when you hit the ***Report Bug Button***.
+  This folder will be automatically zipped when you hit the ***Report Bug button***.
 - Temporary files are stored in the **Cache** folder `.pinokio\Cache` e.g. *Pip_Cache* for components, *Temp* and *Gradio_Temp* for intermediate output files.  
 An exception is *HF_Home* and *XDG_DATA_HOME*. Some Apps download their default models in there when they launch the first time.
 *Principally it is possible to delete all files in the Cache folders, these files will be automatically downloaded if they are needed again.*
@@ -223,7 +224,7 @@ Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pix
 
 ## FAQ
 
-### What does "* Do NOT use exFAT drives" on the Setting page mean
+### What does "* Do NOT use exFAT drives" on the Setting page mean?
 
 ![exFAT warning](Images/exFAT_warning.png "exFAT warning")
 
@@ -233,6 +234,22 @@ However, if you decide to change the location of your home directory, you should
 To check the file system of a drive, open your Explorer, right-click on the drive letter and select ***Properties***.
 
 ![drive menu](Images/drive_menu.png "right-click drive") ![drive properties](Images/drive_properties.png "drive properties")
+
+### What means "ENOENT: no such file or directory"
+
+This kind of error occurs when a file, module or any component needed for the App is missing.  
+To find out which component is missing, have a look at the Terminal / Server or restart the App.
+The last lines of the messages in the Terminal when the App has launched reveal the real problem.  
+Common issues are, *"Module Not Found Error: No module named..."* or *"Out Of Memory Error"*.  
+
+- Missing modules can often be fixed by reinstalling the App.  
+- Out of Memory Errors can be fixed by
+  - decreasing the size of an image
+  - decreasing the number of images you created simultaneously
+  - or using a smaller model (in some Stable Diffusion based Apps).
+  > In other cases, there is no way to reduce memory consumption, which means that this particular application cannot be used with the current hardware.
+
+If reinstalling the App in case of a missing module doesn't help, or if you are unsure about the cause, please make a screenshot of the error in the Terminal / Server and post it in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip together with a screenshot of the Terminal / Server and a brief description of the problem in the [forum][foru].
 
 ## Troubleshooting
 
@@ -413,3 +430,7 @@ There are 3 ways to fix this:
 - **Minimal Requirements**:
 
   - NVIDIA 12 GB VRAM
+
+[ququ]: https://discord.com/channels/1121039057993089076/1131623060315844710
+[foru]: https://discord.com/channels/1121039057993089076/1144756843395158147
+[apqu]: https://discord.com/channels/1121039057993089076/1170118234113064990
