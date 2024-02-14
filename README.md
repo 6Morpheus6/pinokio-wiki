@@ -31,7 +31,6 @@
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
       - [1.) Uninstalling Visual Studio](#1-uninstalling-visual-studio)
-        - [*(This should only be done if Visual Studio isn't needed by any other program on your computer)*](#this-should-only-be-done-if-visual-studio-isnt-needed-by-any-other-program-on-your-computer)
       - [2.) Manually add Visual Buildtools to your existing Visual Studios version](#2-manually-add-visual-buildtools-to-your-existing-visual-studios-version)
       - [3.) Manually install Visual Buildtools](#3-manually-install-visual-buildtools)
     - [Module Not Found Error](#module-not-found-error)
@@ -309,7 +308,7 @@ There are 3 ways to fix this:
 
 #### 1.) Uninstalling Visual Studio
 
-##### *(This should only be done if Visual Studio isn't needed by any other program on your computer)*
+> *This should only be done if Visual Studio isn't needed by any other program on your computer*
 
 - a.) Start the Visual Studio Installer (You find it by typing "Visual" in the search field of your Windows taskbar)
 - b.) Once opened, uninstall **all** old Visual Studio versions.
