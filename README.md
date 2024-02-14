@@ -23,8 +23,8 @@
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
   - [FAQ](#faq)
-    - [What does "\* Do NOT use exFAT drives" on the Setting page mean?](#what-does--do-not-use-exfat-drives-on-the-setting-page-mean)
-    - [What means "ENOENT: no such file or directory"](#what-means-enoent-no-such-file-or-directory)
+    - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
+    - [What means ***"ENOENT: no such file or directory"***?](#what-means-enoent-no-such-file-or-directory)
   - [Troubleshooting](#troubleshooting)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [git, zip, conda: node.js can't be installed (Edge case: "brotli error")](#git-zip-conda-nodejs-cant-be-installed-edge-case-brotli-error)
@@ -34,6 +34,7 @@
         - [*(This should only be done if Visual Studio isn't needed by any other program on your computer)*](#this-should-only-be-done-if-visual-studio-isnt-needed-by-any-other-program-on-your-computer)
       - [2.) Manually add Visual Buildtools to your existing Visual Studios version](#2-manually-add-visual-buildtools-to-your-existing-visual-studios-version)
       - [3.) Manually install Visual Buildtools](#3-manually-install-visual-buildtools)
+    - [Module Not Found Error](#module-not-found-error)
   - [Requirements (not verified)](#requirements-not-verified)
     - [Stable Diffusion](#stable-diffusion)
     - [Fooocus](#fooocus)
@@ -96,11 +97,11 @@ To remove Pinokio and all its components completely from your system, you need t
 
 ### Report Bugs
 
-If you find a bug, if anything isn't working as expected, or if you have issues running an Application, please visit the Pinokio Discord Server and post your issue in the #support channel.
+If you find a bug, if something doesn't work as expected, or if you are having trouble running an Application, please visit the [Pinokio Discord Server][Disc] and post your issue in one of the #support channels.
 
-- Describe your issue in [#quick-questions][ququ] and post a screenshot if possible (quickest way to get help).
+- Describe your issue in [#quick-questions][ququ] and post a screenshot if possible (the quickest way to get help).
 - If you need help with any of the Applications, please visit the [#App-questions][apqu] channel to ask for advice
-- Or hit the ***Report Bug button*** at the top right corner on the Pinokio main page and post your logs in the [#forum][foru] and describe the issue or bug.
+- Or hit the ***Report Bug button*** at the top right corner on the Pinokio main page and post your logs in the [#forum][foru] and describe the bug or issue.
 
 ---
 
@@ -224,7 +225,7 @@ Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pix
 
 ## FAQ
 
-### What does "* Do NOT use exFAT drives" on the Setting page mean?
+### What does ***"Do NOT use exFAT drives"*** on the Setting page mean?
 
 ![exFAT warning](Images/exFAT_warning.png "exFAT warning")
 
@@ -235,7 +236,7 @@ To check the file system of a drive, open your Explorer, right-click on the driv
 
 ![drive menu](Images/drive_menu.png "right-click drive") ![drive properties](Images/drive_properties.png "drive properties")
 
-### What means "ENOENT: no such file or directory"
+### What means ***"ENOENT: no such file or directory"***?
 
 This kind of error occurs when a file, module or any component needed for the App is missing.  
 To find out which component is missing, have a look at the Terminal / Server or restart the App.
@@ -246,10 +247,10 @@ Common issues are, *"Module Not Found Error: No module named..."* or *"Out Of Me
 - Out of Memory Errors can be fixed by
   - decreasing the size of an image
   - decreasing the number of images you created simultaneously
-  - or using a smaller model (in some Stable Diffusion based Apps).
+  - or using a [smaller model](#download-different-models-for-stable-diffusion-fooocus-and-comfyui) (in some Stable Diffusion based Apps).
   > In other cases, there is no way to reduce memory consumption, which means that this particular application cannot be used with the current hardware.
 
-If reinstalling the App in case of a missing module doesn't help, or if you are unsure about the cause, please make a screenshot of the error in the Terminal / Server and post it in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip together with a screenshot of the Terminal / Server and a brief description of the problem in the [forum][foru].
+If reinstalling the App in case of a missing module doesn't help, or if you are unsure about the cause, please make a screenshot of the error in the Terminal / Server and post it in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
 
 ## Troubleshooting
 
@@ -347,6 +348,28 @@ There are 3 ways to fix this:
 
 3.) b.) Available Tab![3.) b.) Available Tab](Images/available.png "Available Tab")
 
+### Module Not Found Error
+
+There are different reasons for the ***"Module Not Found Error: No module named..."*** error.
+
+- A needed component failed to be installed
+- The python environment couldn't be created
+- A dependency conflict with another module occurred
+- The compiling process failed
+
+>Most of these issues are *caused by* a too strict *antivirus program* blocking necessary processes needed for a proper installation of the AI-App or a *bad / disrupted internet connection* during the installation process.  
+Most of these issues can be resolved by disabling the antivirus program, a *factory reset* and *reinstallation* of the specific App.
+
+To fix this issue please:
+
+- Deactivate your Antivirus program
+- Deactivate VPN or proxy (if present)
+- Check your internet connection
+- Press the ***Factory Reset*** button of the App
+- Install the App again
+
+If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
+
 ---
 
 ## Requirements (not verified)
@@ -434,3 +457,4 @@ There are 3 ways to fix this:
 [ququ]: https://discord.com/channels/1121039057993089076/1131623060315844710
 [foru]: https://discord.com/channels/1121039057993089076/1144756843395158147
 [apqu]: https://discord.com/channels/1121039057993089076/1170118234113064990
+[Disc]: https://discord.gg/GqDW6MWkmV
