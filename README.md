@@ -225,7 +225,7 @@ Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pix
 
 ### What does "* Do NOT use exFAT drives" on the Setting page mean
 
-![exFAT warning](Images/exfat_warning.png "exFAT warning")
+![exFAT warning](Images/exFAT_warning.png "exFAT warning")
 
 Actually, this is more of a notification than a warning. If your home directory is in the default location on your C drive or any other built-in SSD drive, it is expected to be formatted with the NTFS file system. exFAT is an old filesystem from the Win98 era and is only used for external drives today.  
 However, if you decide to change the location of your home directory, you should first check the filesystem on the intended drive because exFAT is a limited filesystem that doesn't support all the features provided by Pinokio and its applications.
