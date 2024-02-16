@@ -41,6 +41,9 @@
     - [InstantID](#instantid)
     - [IP-Adapter-FaceID](#ip-adapter-faceid)
     - [Video2Densepose](#video2densepose)
+    - [Turbo SDXL](#turbo-sdxl)
+    - [Stable Cascade](#stable-cascade)
+    - [BBRIA RMBG - Background Remover](#bbria-rmbg---background-remover)
     - [Audio Gradio](#audio-gradio)
     - [Moore-AnimateAnyone / Moore-AnimateAnyone-Mini](#moore-animateanyone--moore-animateanyone-mini)
 
@@ -428,6 +431,36 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 - **Supported Systems**:
 
   - Window, Linux - NVIDIA only
+
+- **Minimal Requirements**:
+
+  - NVIDIA 8 GB VRAM
+
+### Turbo SDXL
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA only
+
+- **Minimal Requirements**:
+
+  - NVIDIA 12 GB VRAM
+
+### Stable Cascade
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA only
+
+- **Minimal Requirements**:
+
+  - NVIDIA 8 GB VRAM, 32 GB RAM
+
+### BBRIA RMBG - Background Remover
+
+- **Supported Systems**:
+
+  - Window, Linux, Mac - NVIDIA, AMD, MPS, CPU
 
 - **Minimal Requirements**:
 
