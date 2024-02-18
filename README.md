@@ -110,6 +110,8 @@ If you find a bug, if something doesn't work as expected, or if you are having t
 - If you need help with any of the Applications, please visit the [#App-questions][apqu] channel to ask for advice
 - Or hit the ***Report Bug button*** at the top right corner on the Pinokio main page and post your logs in the [#forum][foru] and describe the bug or issue.
 
+| [Top](#pinokio-wiki) | [General](#general) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
+
 ---
 
 ## Pinokio
@@ -207,6 +209,10 @@ An exception is *HF_Home* and *XDG_DATA_HOME*. Some Apps download their default 
 - The **drive** folder `.\pinokio\dirve` is a shared models folder used by Stable Diffusion based Applications to save drive space.
   Models, Loras, Embeddings and many more downloaded and stored in their according folders in `.\pinokio\drive\drives\peers\d1704581225212\` can be used by Automatic1111, Fooocus, and ComfyUI without moving or copying the models.
 
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Requirements](#requirements-not-verified) |
+
+---
+
 ## Applications
 
 ### Stable Diffusion Models
@@ -227,6 +233,8 @@ Above these images you see different versions of that model. Most likely the lat
 Back in Stable Diffusion WebUI click the blue refresh button at the top left corner beside the *models dropdown menu*.  
 After that you can choose your model from that dropdown menu.  
 Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pixel. SD1.5 models are trained on 512px images. Sizes bigger than 800px would lead to errors, mutations, mirror effects or double objects. Common horizontal and vertical formats like 600 x 800 or 768 x 512 work as well.
+
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Troubleshooting](#troubleshooting) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
 
 ---
 
@@ -281,6 +289,10 @@ If reinstalling the App in case of a missing module doesn't help, or if you are 
 This message can be ignored. It is just information that a newer pip version is available.  
 In fact, all applications come with this message. Even if they are installed manually.  
 If there is an error, your *pip version* is *never the reason* and *upgrading pip* is *never a solution*.
+
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
+
+---
 
 ## Troubleshooting
 
@@ -412,6 +424,8 @@ To fix this issue please:
 - Install the App again
 
 If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
+
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Applications](#applications) |
 
 ---
 
