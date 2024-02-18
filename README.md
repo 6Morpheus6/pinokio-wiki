@@ -24,15 +24,19 @@
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
   - [FAQ](#faq)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
+    - [I can't change the location of my home directory](#i-cant-change-the-location-of-my-home-directory)
     - [What means ***"ENOENT: no such file or directory"***?](#what-means-enoent-no-such-file-or-directory)
+    - [How can I update pip? I'm getting this notification all the time](#how-can-i-update-pip-im-getting-this-notification-all-the-time)
   - [Troubleshooting](#troubleshooting)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [git, zip, conda: node.js can't be installed (Edge case: "brotli error")](#git-zip-conda-nodejs-cant-be-installed-edge-case-brotli-error)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
+    - [*Context:68:3 Error*](#context683-error)
       - [1.) Uninstalling Visual Studio](#1-uninstalling-visual-studio)
       - [2.) Manually add Visual Buildtools to your existing Visual Studios version](#2-manually-add-visual-buildtools-to-your-existing-visual-studios-version)
       - [3.) Manually install Visual Buildtools](#3-manually-install-visual-buildtools)
+    - [*Node:fs:207:21 Error*](#nodefs20721-error)
     - [Module Not Found Error](#module-not-found-error)
   - [Requirements (not verified)](#requirements-not-verified)
     - [Stable Diffusion](#stable-diffusion)
@@ -44,6 +48,7 @@
     - [Turbo SDXL](#turbo-sdxl)
     - [Stable Cascade](#stable-cascade)
     - [BBRIA RMBG - Background Remover](#bbria-rmbg---background-remover)
+    - [LGM](#lgm)
     - [Audio Gradio](#audio-gradio)
     - [Moore-AnimateAnyone / Moore-AnimateAnyone-Mini](#moore-animateanyone--moore-animateanyone-mini)
 
@@ -238,6 +243,19 @@ To check the file system of a drive, open your Explorer, right-click on the driv
 
 ![drive menu](Images/drive_menu.png "right-click drive") ![drive properties](Images/drive_properties.png "drive properties")
 
+---
+
+### I can't change the location of my home directory
+
+![Path still exists](Images/settings_path.png "Path still exists")
+
+This error message occurs if the folder you are trying to change your home directory to, still exists.  
+When you set a new path in Pinokio Settings, Pinokio will create this new folder for you. But this is only possible as long as this folder doesn't exist. Otherwise the folder and all its contents will be overwritten. To avoid this, you see this error message.  
+To fix this problem, you need to delete or rename the folder you want to change your home directory to.  
+For example: If you set the location to `D:\AI\pinokio`, then this `pinokio` folder may not exist yet. It will be automatically created by Pinokio when you set this path in Pinokio Settings and will become your new home folder.
+
+---
+
 ### What means ***"ENOENT: no such file or directory"***?
 
 This kind of error occurs when a file, module or any component needed for the App is missing.  
@@ -253,6 +271,16 @@ Common issues are, *"Module Not Found Error: No module named..."* or *"Out Of Me
   > In other cases, there is no way to reduce memory consumption, which means that this particular application cannot be used with the current hardware.
 
 If reinstalling the App in case of a missing module doesn't help, or if you are unsure about the cause, please make a screenshot of the error in the Terminal / Server and post it in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
+
+---
+
+### How can I update pip? I'm getting this notification all the time
+
+![pip update](Images/pip_update.png "pip update")
+
+This message can be ignored. It is just information that a newer pip version is available.  
+In fact, all applications come with this message. Even if they are installed manually.  
+If there is an error, your *pip version* is *never the reason* and *upgrading pip* is *never a solution*.
 
 ## Troubleshooting
 
@@ -305,8 +333,10 @@ So, the solution is the same as [above.](#git-zip-conda-nodejs-cant-be-installed
 
 ### Visual Buildtools fails to install on Windows
 
-![vs installation loop](Images/vs_insall.png "vs installation loop") ![vs error message](Images/vs_error.png "vs error message")  
-If Visual Buildtools fails to install, it often happen to a partly preinstalled version.
+### *Context:68:3 Error*
+
+![vs installation loop](Images/vs_insall.png "vs installation loop") ![vs Error 68:3](Images/vs_error.png "vs Error 68:3")  
+If Visual Buildtools fails with the **context:68:3** error, it often happens due to a partially preinstalled version.
 There are 3 ways to fix this:
 
 #### 1.) Uninstalling Visual Studio
@@ -349,6 +379,17 @@ There are 3 ways to fix this:
 - d.) Click the "Install" button at the bottom right corner to install the Visual Buildtools
 
 3.) b.) Available Tab![3.) b.) Available Tab](Images/available.png "Available Tab")
+
+---
+
+### *Node:fs:207:21 Error*
+
+![vs Error 200:21](Images/visual_name.png "vs Error 200:21")
+
+Visual buildtools fails due to the **node:fs:207:21** error, if a folder name in the path to your home directory contains a space, special characters or non-Unicode letters.  
+In this case please [change the path to your Pinokio home directory](#change-the-location-where-apps-are-downloaded-and-installed-home).
+
+---
 
 ### Module Not Found Error
 
@@ -465,6 +506,16 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 - **Minimal Requirements**:
 
   - NVIDIA 8 GB VRAM
+
+### LGM
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA only
+
+- **Minimal Requirements**:
+
+  - NVIDIA 10 GB VRAM
 
 ### Audio Gradio
 
