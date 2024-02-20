@@ -91,7 +91,7 @@ Navigate there with your Explorer or File Manager and in there you will see the 
 - Close Pinokio if it is still open.
 - Go to [Pinokio Computer](https://github.com/pinokiocomputer/pinokio), click ***Latest*** on the right side of that page and choose the correct version for you system.
 - Download and install Pinokio. This will replace your old Pinokio version with the new one without touching your installed Apps.
-- Now you can start Pinokio again and move on with your new version.
+- Now you can start Pinokio again and move on using your Apps with the new version.
 
 ### Uninstall Pinokio
 
@@ -106,8 +106,8 @@ To remove Pinokio and all its components completely from your system, you need t
 
 If you find a bug, if something doesn't work as expected, or if you are having trouble running an Application, please visit the [Pinokio Discord Server][Disc] and post your issue in one of the #support channels.
 
-- Describe your issue in [#quick-questions][ququ] and post a screenshot if possible (the quickest way to get help).
-- If you need help with any of the Applications, please visit the [#App-questions][apqu] channel to ask for advice
+- Describe your issue in [#pinokio-support][pisu] and post a screenshot if possible (the quickest way to get help).
+- If you need help with any of the Applications, please visit the [#App-Assistance][apas] channel to ask for advice
 - Or hit the ***Report Bug button*** at the top right corner on the Pinokio main page and post your logs in the [#forum][foru] and describe the bug or issue.
 
 | [Top](#pinokio-wiki) | [General](#general) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
@@ -278,7 +278,7 @@ Common issues are, *"Module Not Found Error: No module named..."* or *"Out Of Me
   - or using a [smaller model](#download-different-models-for-stable-diffusion-fooocus-and-comfyui) (in some Stable Diffusion based Apps).
   > In other cases, there is no way to reduce memory consumption, which means that this particular application cannot be used with the current hardware.
 
-If reinstalling the App in case of a missing module doesn't help, or if you are unsure about the cause, please make a screenshot of the error in the Terminal / Server and post it in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
+If reinstalling the App in case of a missing module doesn't help, or if you are unsure about the cause, please make a screenshot of the error in the Terminal / Server and post it in [pinokio-support][pisu] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
 
 ---
 
@@ -423,7 +423,7 @@ To fix this issue please:
 - Press the ***Factory Reset*** button of the App
 - Install the App again
 
-If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [quick-questions][ququ] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
+If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [pinokio-support][pisu] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Applications](#applications) |
 
@@ -551,7 +551,7 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 
   - NVIDIA 12 GB VRAM
 
-[ququ]: https://discord.com/channels/1121039057993089076/1131623060315844710
+[pisu]: https://discord.com/channels/1121039057993089076/1131623060315844710
 [foru]: https://discord.com/channels/1121039057993089076/1144756843395158147
-[apqu]: https://discord.com/channels/1121039057993089076/1170118234113064990
+[apas]: https://discord.com/channels/1121039057993089076/1170118234113064990
 [Disc]: https://discord.gg/GqDW6MWkmV
