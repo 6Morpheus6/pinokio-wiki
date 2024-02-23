@@ -25,6 +25,7 @@
   - [FAQ](#faq)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
     - [I can't change the location of my home directory](#i-cant-change-the-location-of-my-home-directory)
+    - [I'm asked to upgrade Pinokio to download the App, but Pinokio is still up to date](#im-asked-to-upgrade-pinokio-to-download-the-app-but-pinokio-is-still-up-to-date)
     - [What means ***"ENOENT: no such file or directory"***?](#what-means-enoent-no-such-file-or-directory)
     - [How can I update pip? I'm getting this notification all the time](#how-can-i-update-pip-im-getting-this-notification-all-the-time)
   - [Troubleshooting](#troubleshooting)
@@ -42,6 +43,7 @@
     - [Stable Diffusion](#stable-diffusion)
     - [Fooocus](#fooocus)
     - [ComfyUI](#comfyui)
+    - [Gligen](#gligen)
     - [InstantID](#instantid)
     - [IP-Adapter-FaceID](#ip-adapter-faceid)
     - [Video2Densepose](#video2densepose)
@@ -49,6 +51,7 @@
     - [Stable Cascade](#stable-cascade)
     - [BBRIA RMBG - Background Remover](#bbria-rmbg---background-remover)
     - [LGM](#lgm)
+    - [XTTS](#xtts)
     - [Audio Gradio](#audio-gradio)
     - [Moore-AnimateAnyone / Moore-AnimateAnyone-Mini](#moore-animateanyone--moore-animateanyone-mini)
 
@@ -242,6 +245,8 @@ Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pix
 
 ### What does ***"Do NOT use exFAT drives"*** on the Setting page mean?
 
+> *Do NOT use exFAT drives
+
 ![exFAT warning](Images/exFAT_warning.png "exFAT warning")
 
 Actually, this is more of a notification than a warning. If your home directory is in the default location on your C drive or any other built-in SSD drive, it is expected to be formatted with the NTFS file system. exFAT is an old filesystem from the Win98 era and is only used for external drives today.  
@@ -255,12 +260,26 @@ To check the file system of a drive, open your Explorer, right-click on the driv
 
 ### I can't change the location of my home directory
 
+> Error: The path already exists. Please remove the folder and retry.
+
 ![Path still exists](Images/settings_path.png "Path still exists")
 
 This error message occurs if the folder you are trying to change your home directory to, still exists.  
 When you set a new path in Pinokio Settings, Pinokio will create this new folder for you. But this is only possible as long as this folder doesn't exist. Otherwise the folder and all its contents will be overwritten. To avoid this, you see this error message.  
 To fix this problem, you need to delete or rename the folder you want to change your home directory to.  
 For example: If you set the location to `D:\AI\pinokio`, then this `pinokio` folder may not exist yet. It will be automatically created by Pinokio when you set this path in Pinokio Settings and will become your new home folder.
+
+---
+
+### I'm asked to upgrade Pinokio to download the App, but Pinokio is still up to date
+
+> Update pinokio (Requires script v support)
+
+![Requires script v support](Images/Script_v.png "Requires script v support")
+
+Especially older Apps and Apps from not verified Script Authors show up the message to update Pinokio to be able to download the App.  
+This message can be ignored if you are still using the latest version of Pinokio.  
+To be able to download the App although, simply copy the given URL and use the "Download from URL" button at the top of the Discover page.
 
 ---
 
@@ -283,6 +302,8 @@ If reinstalling the App in case of a missing module doesn't help, or if you are 
 ---
 
 ### How can I update pip? I'm getting this notification all the time
+
+> A new release of pip is available
 
 ![pip update](Images/pip_update.png "pip update")
 
@@ -461,6 +482,19 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
   - ComfyUI - SD1.5 Models: NVIDIA 4GB VRAM, 16GB RAM  
   - ComfyUI - SDXL Models: NVIDIA 8GB VRAM, 24 RAM
 
+### Gligen
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA, AMD, CPU
+  - Apple (Silicon) - MPS
+  - Intel Mac - CPU
+
+- **Minimal Requirements**:
+
+  - ComfyUI - SD1.5 Models: NVIDIA 4GB VRAM, 16GB RAM  
+  - ComfyUI - SDXL Models: NVIDIA 8GB VRAM, 24 RAM
+
 ### InstantID
 
 - **Supported Systems**:
@@ -510,6 +544,7 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 - **Minimal Requirements**:
 
   - NVIDIA 8 GB VRAM, 32 GB RAM
+  - MPS < 20 GB
 
 ### BBRIA RMBG - Background Remover
 
@@ -530,6 +565,19 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 - **Minimal Requirements**:
 
   - NVIDIA 10 GB VRAM
+
+### XTTS
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA, AMD, CPU
+  - Apple (Silicon) - MPS
+  - Intel Mac - CPU
+
+- **Minimal Requirements**:
+
+  - NVIDIA 4 GB VRAM
+  - CPU 16 GB RAM
 
 ### Audio Gradio
 
