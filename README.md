@@ -264,10 +264,11 @@ To check the file system of a drive, open your Explorer, right-click on the driv
 
 ![Path still exists](Images/settings_path.png "Path still exists")
 
-This error message occurs if the folder you are trying to change your home directory to, still exists.  
-When you set a new path in Pinokio Settings, Pinokio will create this new folder for you. But this is only possible as long as this folder doesn't exist. Otherwise the folder and all its contents will be overwritten. To avoid this, you see this error message.  
+This error message occurs if the folder you are trying to change your home directory to still exists.  
+If you set a new path in Pinokio Settings, Pinokio will create this new folder for you. But this is only possible as long as this folder doesn't exist. Otherwise the folder and all its content will be overwritten. To avoid this, you see this error message.  
 To fix this problem, you need to delete or rename the folder you want to change your home directory to.  
-For example: If you set the location to `D:\AI\pinokio`, then this `pinokio` folder may not exist yet. It will be automatically created by Pinokio when you set this path in Pinokio Settings and will become your new home folder.
+For example: If you set the location to `D:\AI\pinokio`, then this `pinokio` folder may not exist yet. It will be automatically created by Pinokio when you set this path in Pinokio Settings and will become your new home folder.  
+For further information please read how to ***[Change the location where Apps are downloaded and installed (Home)](#change-the-location-where-apps-are-downloaded-and-installed-home)***
 
 ---
 
