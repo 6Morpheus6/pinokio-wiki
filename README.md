@@ -561,7 +561,7 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 
 - **Supported Systems**:
 
-  - Window, Linux - NVIDIA only
+  - Window, NVIDIA only
 
 - **Minimal Requirements**:
 
