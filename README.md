@@ -136,6 +136,11 @@ Here you can:
 
 - Change the color theme
 - [Change the location of your Home directory](#change-the-location-where-apps-are-downloaded-and-installed-home)
+- Troubleshoot (Pinokio 1.2.0 an higher)
+  - View or delete the **bin** folder (deleting will remove all pre-requirements. They will be reinstalled with the next application you install)
+  - View or delete the **cache** folder (deleting will remove all temporary files and some default models. These models will be reloaded the next time the App that needs the model is launched)
+  - View the **drives** folder (this is the location of the shared custom models used by Stable Diffusion Based Apps)
+
 
 ### Discover Page
 
@@ -222,20 +227,33 @@ An exception is *HF_Home* and *XDG_DATA_HOME*. Some Apps download their default 
 
 ### Download different models for Stable Diffusion, Fooocus and ComfyUI
 
-If your computer doesn't have enough performance to use SDXL models, you can download finetuned **SD1.5** Models from [Civitai](https://civitai.com).
-Everything there can be downloaded for free. But it's recommended to create a free account to see all available [models](https://civitai.com/models).  
+On [Civitai](https://civitai.com) you can download finetuned SD1.5 and SDXL models, Loras and more for free.
+But it's recommended to create a free account to see all available models.  
 ***The new Stable Diffusion based **version 1.1** Apps come with a button allowing you to access Civitai directly within the App.***  
 
-- On the Civitai [models](https://civitai.com/models) page filter the displayed models at the top right corner *("Filters")* to display only **SD1.5** models and check *Checkpoints*, *All* and *SD1.5*.
-- Select an image that represents best what you have in mind and click it.
+- Filter the models displayed in the top right corner of the [Models](https://civitai.com/models) page.
+- To display only models, filter for *Checkpoints*, *All* and your desired model version *SDXL or SD1.5*  (pic1)
+  - Select SD1.5 if you have less than 8GB VRAM
+  - Select SD1.5 and SDXL if you have 8GB and more VRAM
+- Select an image that represents best what you have in mind and click on it.
 - On the following page you can scroll through different pictures created with that model.
-Above these images you see different versions of that model. Most likely the latest version is the newest and best one.
-- Choose your desired version and press the *Download* Button right beside the *Create* Button to download the model.
+Above these images you see different versions of this model. Most likely the latest version is the newest and best one.
+- The right side displays the model type and the Stable Diffusion version. Choose your desired model version at the top and press the *Download* Button right beside the *Create* Button to download the model. (pic2)
 - Put it into `.\pinokio\drive\drives\peers\d1704581225212\checkpoints` on your computer.
 
-Back in Stable Diffusion WebUI click the blue refresh button at the top left corner beside the *models dropdown menu*.  
-After that you can choose your model from that dropdown menu.  
-Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pixel. SD1.5 models are trained on 512px images. Sizes bigger than 800px would lead to errors, mutations, mirror effects or double objects. Common horizontal and vertical formats like 600 x 800 or 768 x 512 work as well.
+1.) Filters  
+![Filters](Images/Filters.png "Filters")
+
+2.) Download  
+![Download](Images/Civitai_download.png "Download")
+
+Back in Stable Diffusion WebUI click the blue refresh button at the top left corner right beside the *models dropdown menu*.  
+After that you can select your model in that dropdown menu. (pic3)  
+Lower the size of the images you want to create to 512 x 512 up to 800 x 800 pixel for SD1.5 models since they are trained on 512px images. Sizes bigger than 800px would lead to errors, mutations, mirror effects or double objects. Common horizontal and vertical formats like 600 x 800 or 768 x 512 work as well.  
+SDXL models can be used with sizes up to 1280x1280px.
+
+3.) Refresh and select  
+![alt text](Images/A1111_menu.png)
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Troubleshooting](#troubleshooting) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
 
