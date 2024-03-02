@@ -141,7 +141,6 @@ Here you can:
   - View or delete the **cache** folder (deleting will remove all temporary files and some default models. These models will be reloaded the next time the App that needs the model is launched)
   - View the **drives** folder (this is the location of the shared custom models used by Stable Diffusion Based Apps)
 
-
 ### Discover Page
 
 The Discover page in Pinokio allows you to install new Apps.
