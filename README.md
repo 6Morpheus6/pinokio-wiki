@@ -16,6 +16,7 @@
     - [Application screen](#application-screen)
       - [Launching the App](#launching-the-app)
       - [Terminal](#terminal)
+      - [Wifi Sharing](#wifi-sharing)
       - [Update, Reinstall, Factory Reset and Delete](#update-reinstall-factory-reset-and-delete)
       - [Files](#files)
     - [Model and File Management](#model-and-file-management)
@@ -25,12 +26,10 @@
   - [FAQ](#faq)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
     - [I can't change the location of my home directory](#i-cant-change-the-location-of-my-home-directory)
-    - [I'm asked to upgrade Pinokio to download the App, but Pinokio is still up to date](#im-asked-to-upgrade-pinokio-to-download-the-app-but-pinokio-is-still-up-to-date)
     - [What means ***"ENOENT: no such file or directory"***?](#what-means-enoent-no-such-file-or-directory)
     - [How can I update pip? I'm getting this notification all the time](#how-can-i-update-pip-im-getting-this-notification-all-the-time)
   - [Troubleshooting](#troubleshooting)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
-    - [git, zip, conda: node.js can't be installed (Edge case: "brotli error")](#git-zip-conda-nodejs-cant-be-installed-edge-case-brotli-error)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
     - [*Context:68:3 Error*](#context683-error)
@@ -44,22 +43,26 @@
     - [Fooocus](#fooocus)
     - [ComfyUI](#comfyui)
     - [Gligen](#gligen)
+    - [Supir](#supir)
+    - [TripoSR](#triposr)
     - [InstantID](#instantid)
     - [IP-Adapter-FaceID](#ip-adapter-faceid)
     - [Video2Densepose](#video2densepose)
     - [Turbo SDXL](#turbo-sdxl)
     - [Stable Cascade](#stable-cascade)
     - [BBRIA RMBG - Background Remover](#bbria-rmbg---background-remover)
+    - [Differential Diffusion](#differential-diffusion)
     - [LGM](#lgm)
     - [XTTS](#xtts)
     - [Audio Gradio](#audio-gradio)
+    - [Magic Animate Mini](#magic-animate-mini)
     - [Moore-AnimateAnyone / Moore-AnimateAnyone-Mini](#moore-animateanyone--moore-animateanyone-mini)
 
 ## General
 
 ### Install Pinokio
 
-- Follow the instructions in [Pinokio Tutorial](https://docs.pinokio.computer/download/) to install Pinokio for [Windows](https://docs.pinokio.computer/download/windows.html), [Mac](https://docs.pinokio.computer/download/applemac.html), [Intel Mac](https://docs.pinokio.computer/download/intelmac.html) and [Linux](https://docs.pinokio.computer/download/linux.html).
+- Follow the instructions in [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install) to install Pinokio for [Windows](https://program.pinokio.computer/#/?id=windows), [Mac](https://program.pinokio.computer/#/?id=mac) or [Linux](https://program.pinokio.computer/#/?id=linux).
 
 ### Change the location where Apps are downloaded and installed (Home)
 
@@ -81,7 +84,9 @@ Depending on the amount of files this may take some time.
 
 Visit the Discover page in Pinokio to install new Apps.  
 Click on the Icon of the App you want to Install and click the Download button.  
-Choose the default folder or set a new name for the App folder and click Install.
+Choose the default folder or set a new name for the App folder and click Download.
+Once downloaded, the app appears on the main page of Pinokio.
+Select the App and click ***Install***.
 
 ### Delete installed Apps
 
@@ -92,7 +97,7 @@ Navigate there with your Explorer or File Manager and in there you will see the 
 ### Upgrade Pinokio
 
 - Close Pinokio if it is still open.
-- Go to [Pinokio Computer](https://github.com/pinokiocomputer/pinokio), click ***Latest*** on the right side of that page and choose the correct version for you system.
+- Visit the [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install), select the link for your OS and press the ***Download*** button.
 - Download and install Pinokio. This will replace your old Pinokio version with the new one without touching your installed Apps.
 - Now you can start Pinokio again and move on using your Apps with the new version.
 
@@ -113,11 +118,11 @@ This will only uninstall Pinokio ***not*** your Apps. Your Home directory will s
 
 ### Report Bugs
 
-If you find a bug, if something doesn't work as expected, or if you are having trouble running an Application, please visit the [Pinokio Discord Server][Disc] and post your issue in one of the #support channels.
+If you find a bug, if something doesn't work as expected, or if you're having trouble running an Application, please visit the [Pinokio Discord Server][Disc] and post your issue in one of the #support channels.
 
 - Describe your issue in [#pinokio-support][pisu] and post a screenshot if possible (the quickest way to get help).
-- If you need help with any of the Applications, please visit the [#App-Assistance][apas] channel to ask for advice
-- Or hit the ***Report Bug button*** at the top right corner on the Pinokio main page and post your logs in the [#forum][foru] and describe the bug or issue.
+- Or hit the ***Report Bug button*** at the top right corner on the main page of Pinokio and post your logs in the [#forum][foru] and describe the bug or issue.
+- Advice on how to use Applications, can be found in [#app-Assistance][apas].
 
 | [Top](#pinokio-wiki) | [General](#general) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
 
@@ -156,16 +161,17 @@ The Discover page in Pinokio allows you to install new Apps.
 
 All downloaded Apps will be displayed on the Pinokio home screen and can be installed from there.
 
-> - Applications labeled with **VERSION 1** only work with **Pinokio 1.0.15** or higher!
-> - Applications labeled with **VERSION 1.1** only work with **Pinokio 1.1.0** or higher!
+> - Applications labeled with **SCRIPT VERSION 1** only work with **Pinokio 1.0.15** or higher!
+> - Applications labeled with **SCRIPT VERSION 1.5** only work with **Pinokio 1.3.4** or higher!  
+> - A yellow banner with a corresponding message appears on the main page of Pinokio if your Pinokio version doesn't support the Script Version of an installed Application.
+> In that case please [Upgrade Pinokio](#upgrade-pinokio) to the latest version.
 
 All needed components will be installed with your first App.  
 **NOTE: It is highly recommended to switch off your antivirus, during this first installation to avoid unnecessary subsequent troubleshooting.**
 
-Applications not created by a verified publisher and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can still be installed with the ***Download from URL*** button at the top of the Discover page.
-*This method can also be used if the normal way to Download an App fails (e.g. because of a notification to update Pinokio although it is still up to date when trying to download an App the regular way on the Discover page).*  
-> Note: Only Applications with a `pinokio.js` and respective *install.json* and *start.json* scripts etc. can be installed via Pinokio.  
-To find out if an Application on GitHub that doesn't appear on the Discover page can be installed with Pinokio, have a look on the GitHub repo and check if it contains a *pinokio.js* script on the main page.  
+Applications not created by a verified publishers and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can still be installed with the ***Download from URL*** button at the top of the Discover page.
+> Note: Only Applications with a `pinokio.js` and respective `install.json` or `install.js` and `start.json` or `start.js` scripts can be installed with Pinokio.  
+To find out if an Application on GitHub that doesn't appear on the Discover page can be installed with Pinokio, have a look on the GitHub repo and check for these scripts on the main page of the project.  
 
 ### Application screen
 
@@ -181,6 +187,17 @@ To use the application in your default browser, click the **Open External** butt
 
 The Terminal / Server displays all processes, errors and details about the App.  
 Here you can also stop and restart the App again by clicking the **Stop** / **Run** button on the top.
+
+#### Wifi Sharing
+
+Applications with Script version 1.1 and higher now support Wifi Sharing and can be accessed via mobile phone or other devices within the local network.
+To access Pinokio and these Applications via Wifi, it is needed to grant access for the device in the first place.  
+This can be done by clicking Wifi sharing on the main page of Pinokio at the top right corner and scanning the given QR Code.
+For LAN connections within the local network, this step can be skipped.  
+
+- ***Wifi sharing*** will open the public URL to remote control the app with your mobile phone or tablet.
+- ***Open Session*** opens the App only with the local URL.
+- Additionally to the local URL address a proxy address appears in the terminal to access the app within the local network.
 
 #### Update, Reinstall, Factory Reset and Delete
 
@@ -295,18 +312,6 @@ For further information please read how to ***[Change the location where Apps ar
 
 ---
 
-### I'm asked to upgrade Pinokio to download the App, but Pinokio is still up to date
-
-> Update pinokio (Requires script v support)
-
-![Requires script v support](Images/Script_v.png "Requires script v support")
-
-Especially older Apps and Apps from not verified Script Authors show up the message to update Pinokio to be able to download the App.  
-This message can be ignored if you are still using the latest version of Pinokio.  
-To be able to download the App although, simply copy the given URL and use the "Download from URL" button at the top of the Discover page.
-
----
-
 ### What means ***"ENOENT: no such file or directory"***?
 
 This kind of error occurs when a file, module or any component needed for the App is missing.  
@@ -356,21 +361,6 @@ There are basically 2 reasons why you might end up in this kind of installation 
   - Try to install the App again
 
 Pinokio will now install Miniconda and the other components again properly.
-
----
-
-### git, zip, conda: node.js can't be installed (Edge case: "brotli error")
-
-![brotli Traceback Error](Images/brotli_traceback.png "brotli Traceback Error")
-
-If the installation of git, zip, and :node.js fails with the Traceback error: *AttributeError: module 'brotli' has no attribute 'error'*
-like in the screenshot above, then there are some easy steps to fix it:
-
-- Open Anaconda Powershell prompt (miniconda) *Type `Anaconda` in the search field of the Windows taskbar*
-- In Anaconda type `pip install brotli`
-- Once it is finished, start Pinokio and try to install your App again
-
-![How to find Anaconda Powershell Prompt (miniconda)](Images/Anaconda_Powershell.png "How to find Anaconda Powershell Prompt (miniconda)")
 
 ---
 
@@ -516,8 +506,28 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 
 - **Minimal Requirements**:
 
-  - ComfyUI - SD1.5 Models: NVIDIA 4GB VRAM, 16GB RAM  
-  - ComfyUI - SDXL Models: NVIDIA 8GB VRAM, 24 RAM
+  - NVIDIA 4GB VRAM, 16GB RAM  
+
+### Supir
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA only
+
+- **Minimal Requirements**:
+
+  - NVIDIA 16 GB VRAM
+
+### TripoSR
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA
+  - Apple (Silicon) - MPS
+
+- **Minimal Requirements**:
+
+  - NVIDIA 10GB VRAM, 24GB RAM  
 
 ### InstantID
 
@@ -528,6 +538,7 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 - **Minimal Requirements**:
 
   - NVIDIA 12 GB VRAM
+  - MPS 20GB
 
 ### IP-Adapter-FaceID
 
@@ -564,17 +575,31 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 - **Supported Systems**:
 
   - Window, Linux - NVIDIA only
+  - Mac: MPS only
 
 - **Minimal Requirements**:
 
-  - NVIDIA 8 GB VRAM, 32 GB RAM
+  - NVIDIA 16 GB VRAM, 32 GB RAM
   - MPS < 20 GB
 
 ### BBRIA RMBG - Background Remover
 
 - **Supported Systems**:
 
-  - Window, Linux, Mac - NVIDIA, AMD, MPS, CPU
+  - Window, Linux - NVIDIA, AMD, CPU
+  - Apple (Silicon) - MPS
+  - Intel Mac - CPU
+
+- **Minimal Requirements**:
+
+  - NVIDIA 8 GB VRAM
+
+### Differential Diffusion
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA
+  - Apple (Silicon) - MPS
 
 - **Minimal Requirements**:
 
@@ -612,6 +637,16 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 - **Minimal Requirements**:
 
   - NVIDIA 8GB VRAM
+
+### Magic Animate Mini
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA only
+
+- **Minimal Requirements**:
+
+  - NVIDIA 12 GB VRAM, 32 GB RAM
 
 ### Moore-AnimateAnyone / Moore-AnimateAnyone-Mini
 
