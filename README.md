@@ -31,6 +31,7 @@
   - [Troubleshooting](#troubleshooting)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
+    - [Cuda can't be installed](#cuda-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
     - [*Context:68:3 Error*](#context683-error)
       - [1.) Uninstalling Visual Studio](#1-uninstalling-visual-studio)
@@ -356,8 +357,9 @@ There are basically 2 reasons why you might end up in this kind of installation 
 - Or Pinokio detects a pre-installed Anaconda version and skips the installation of the needed components
 
   - If there is a pre-installed Anaconda version you don't need, please uninstall it.
+  - If you need your pre-installed Anaconda version please remove it from PATH temporarily until all requirements are installed.
   - Deactivate your antivirus program and firewall.
-  - Delete the `miniconda` folder located in `.\pinokio\bin`
+  - Delete the `bin` folder `.\pinokio\bin`
   - Try to install the App again
 
 Pinokio will now install Miniconda and the other components again properly.
@@ -373,8 +375,22 @@ Most likely this fails with the message: *"CondaValueError: You have chosen a no
 
 ![libmamba](Images/libmamba.png "libmamba")
 
-This loop occurs for the same reason why git, zip and node.js fails to install.  
-So, the solution is the same as [above.](#git-zip-conda-nodejs-cant-be-installed)
+This loop can be often seen after updating pinokio from an earlier version.  
+In previous versions libmamba was installed in another channel.
+To solve this issue, it's needed to install the Requirements again.
+
+- Delete the `bin` folder `.\pinokio\bin`
+- Try to install the App again
+
+---
+
+### Cuda can't be installed
+
+This can happen due to outdated or wrong NVIDIA drivers, or a corrupted cuda library download
+
+- Please check NVIDIA Experience for for new driver updates and update your driver if possible.
+- Delete the `bin` folder `.\pinokio\bin`
+- Install your Application or start an installed Application to trigger the installation of the Requirements again.
 
 ---
 
@@ -383,8 +399,10 @@ So, the solution is the same as [above.](#git-zip-conda-nodejs-cant-be-installed
 ### *Context:68:3 Error*
 
 ![vs installation loop](Images/vs_insall.png "vs installation loop") ![vs Error 68:3](Images/vs_error.png "vs Error 68:3")  
-If Visual Buildtools fails with the **context:68:3** error, it often happens due to a partially preinstalled version.
+If Visual Buildtools fails with the **context:68:3** error, it often happens due to a partially preinstalled version or not enough disk space on your system drive.
 There are 3 ways to fix this:
+
+> Make sure to have at least 15 GB space on your system drive
 
 #### 1.) Uninstalling Visual Studio
 
@@ -407,7 +425,15 @@ There are 3 ways to fix this:
 
 - a.) Start the Visual Studio Installer - *Screenshot 1.) a.)*
 - b.) Click "Modify"
-- c.) Select "Desktop Development C++" and check all components marked in *Screenshot 2.) c.)*
+- c.) Select "Desktop Development C++" and check the following components like marked in *Screenshot 2.) c.)*
+  - C++ Build Tools core features
+  - C++ 2019 Redistributable Update
+  - C++ core desktop features
+  - MSVC v142 - VS 2019 C++ x64/x86 build tools
+  - Windows 10 SDK (10.0.19041.0)
+  - C++ CMake tools for Windows
+  - Testing tools core features - Build Tools
+  - C++ AddressSanitizer
 - d.) Click the "Modify" button at the bottom right corner to install the Visual Buildtools
 
 2.) b.) Modify your Visual Studio installation  
@@ -422,7 +448,15 @@ There are 3 ways to fix this:
 
 - a.) Start the Visual Studio Installer - *Screenshot 1.) a.)*
 - b.) Click the "Available" tab and choose "Visual Studio Community 2022" and click "Install"
-- c.) Choose Desktop Development C++ and select all the components marked in *Screenshot 2.) c.)*
+- c.) Select "Desktop Development C++" and check the following components like marked in *Screenshot 2.) c.)*
+  - C++ Build Tools core features
+  - C++ 2019 Redistributable Update
+  - C++ core desktop features
+  - MSVC v142 - VS 2019 C++ x64/x86 build tools
+  - Windows 10 SDK (10.0.19041.0)
+  - C++ CMake tools for Windows
+  - Testing tools core features - Build Tools
+  - C++ AddressSanitizer
 - d.) Click the "Install" button at the bottom right corner to install the Visual Buildtools
 
 3.) b.) Available Tab![3.) b.) Available Tab](Images/available.png "Available Tab")
