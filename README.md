@@ -402,7 +402,7 @@ This can happen due to outdated or wrong NVIDIA drivers, or a corrupted cuda lib
 If Visual Buildtools fails with the **context:68:3** error, it often happens due to a partially preinstalled version or not enough disk space on your system drive.
 There are 3 ways to fix this:
 
-> Make sure to have at least 15 GB space on your system drive
+> Make sure you have at least 15 GB space on your system drive
 
 #### 1.) Uninstalling Visual Studio
 
