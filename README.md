@@ -28,7 +28,7 @@
     - [I can't change the location of my home directory](#i-cant-change-the-location-of-my-home-directory)
     - [What means ***"ENOENT: no such file or directory"***?](#what-means-enoent-no-such-file-or-directory)
     - [How can I update pip? I'm getting this notification all the time](#how-can-i-update-pip-im-getting-this-notification-all-the-time)
-  - [Troubleshooting](#troubleshooting)
+  - [Troubleshooting - Pinokio](#troubleshooting---pinokio)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Cuda can't be installed](#cuda-cant-be-installed)
@@ -39,6 +39,9 @@
       - [3.) Manually install Visual Buildtools](#3-manually-install-visual-buildtools)
     - [*Node:fs:207:21 Error*](#nodefs20721-error)
     - [Module Not Found Error](#module-not-found-error)
+  - [Troubleshooting - Applications](#troubleshooting---applications)
+    - [Facefusion doesn't launch after update](#facefusion-doesnt-launch-after-update)
+    - [Facefusion launches - no video output](#facefusion-launches---no-video-output)
   - [Requirements (not verified)](#requirements-not-verified)
     - [Stable Diffusion](#stable-diffusion)
     - [Fooocus](#fooocus)
@@ -100,7 +103,8 @@ Navigate there with your Explorer or File Manager and in there you will see the 
 - Close Pinokio if it is still open.
 - Visit the [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install), select the link for your OS and press the ***Download*** button.
 - Download and install Pinokio. This will replace your old Pinokio version with the new one without touching your installed Apps.
-- Now you can start Pinokio again and move on using your Apps with the new version.
+
+> **Note:** Sometimes it is necessary to reset the `bin` folder (via Settings in Pinokio). This is a common fix for many other problems as well. As it flushes out any problematic packages that may be causing issues. It's generally recommended as the first fix for most problems. It won't affect the settings or saved files of any of your currently installed applications, but it will download and reinstall all necessary requirements again the first time you run an application afterwards.
 
 ### Uninstall Pinokio
 
@@ -123,9 +127,16 @@ If you find a bug, if something doesn't work as expected, or if you're having tr
 
 - Describe your issue in [#pinokio-support][pisu] and post a screenshot if possible (the quickest way to get help).
 - Or hit the ***Report Bug button*** at the top right corner on the main page of Pinokio and post your logs in the [#forum][foru] and describe the bug or issue.
+- You can also [create a ticket][tick]. Tickets and the information provided there can only be seen by admins.  
+  Provide as much information as possible to get quick help.  
+  Such as:
+  - A brief description of your issue or error
+  - OS and GPU
+  - **Most important**: Your Logs `logs.zip` (Logs will be generated when you hit the report bug button and can be saved anywhere on your computer)
+  - Screenshots of the issue or error (if relevant)
 - Advice on how to use Applications, can be found in [#app-Assistance][apas].
 
-| [Top](#pinokio-wiki) | [General](#general) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
+| [Top](#pinokio-wiki) | [General](#general) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
 ---
 
@@ -171,7 +182,7 @@ All needed components will be installed with your first App.
 **NOTE: It is highly recommended to switch off your antivirus, during this first installation to avoid unnecessary subsequent troubleshooting.**
 
 Applications not created by a verified publishers and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can still be installed with the ***Download from URL*** button at the top of the Discover page.
-> Note: Only Applications with a `pinokio.js` and respective `install.json` or `install.js` and `start.json` or `start.js` scripts can be installed with Pinokio.  
+> **Note:** Only Applications with a `pinokio.js` and respective `install.json` or `install.js` and `start.json` or `start.js` scripts can be installed with Pinokio.  
 To find out if an Application on GitHub that doesn't appear on the Discover page can be installed with Pinokio, have a look on the GitHub repo and check for these scripts on the main page of the project.  
 
 ### Application screen
@@ -213,7 +224,7 @@ Not all Apps come with an Update, Reinstall or Factory Reset button
 The Files button leads to the Pinokio scripts, App-folder, subfolders and all containing files. It is even possible to edit and save these files within Pinokio, although it is recommended to use an appropriate Editor or IDE for that purpose.  
 This should only be done in exceptional cases and with caution since a mistake can easily break the App.  
 *It's always wise to make a backup of the original files before modifying them.*
-> **Note: A *Factory Reset will delete all files and folders* in the App folder *including your output and custom models! Always* make sure to *save all important files and models beforehand*!**
+> **Note: *A Factory Reset will delete all files and folders* in the App folder *including your output and custom models! Always* make sure to *save all important files and models beforehand*!**
 
 ### Model and File Management
 
@@ -225,7 +236,7 @@ This should only be done in exceptional cases and with caution since a mistake c
     - Output folder contains all generated files
     - Models are stored in the Models / Checkpoints folder  
 
->Note: If you delete an Application or click the ***Factory Reset*** Button, the Output and Models folder will be deleted as well.  
+>**Note:** If you delete an Application or click the ***Factory Reset*** Button, the Output and Models folder will be deleted as well.  
 **Make sure to save any important *Output Files* and *Models* before you delete an App!**
 
 - The **bin** folder `.\pinokio\bin` contains all required components for Applications. These *pre-requirements* (Conda, git, zip, etc.) will be installed in `.\pinokio\bin\miniconda`
@@ -235,12 +246,12 @@ This should only be done in exceptional cases and with caution since a mistake c
 An exception is *HF_Home* and *XDG_DATA_HOME*. Some Apps download their default models in there when they launch the first time.
 *Principally it is possible to delete all files in the Cache folders, these files will be automatically downloaded if they are needed again.*
 
-> Note: Some of these files, especially models, can be very large and should be kept to save time.
+> **Note:** Some of these files, especially models, can be very large and should be kept to save time.
 
 - The **drive** folder `.\pinokio\dirve` is a shared models folder used by Stable Diffusion based Applications to save drive space.
   Models, Loras, Embeddings and many more downloaded and stored in their according folders in `.\pinokio\drive\drives\peers\d1704581225212\` can be used by Automatic1111, Fooocus, and ComfyUI without moving or copying the models.
 
-| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Requirements](#requirements-not-verified) |
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
 ---
 
@@ -278,7 +289,7 @@ SDXL models can be used with sizes up to 1280x1280px.
 3.) Refresh and select  
 ![alt text](Images/A1111_menu.png)
 
-| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Troubleshooting](#troubleshooting) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
 ---
 
@@ -341,11 +352,11 @@ This message can be ignored. It is just information that a newer pip version is 
 In fact, all applications come with this message. Even if they are installed manually.  
 If there is an error, your *pip version* is *never the reason* and *upgrading pip* is *never a solution*.
 
-| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Applications](#applications) | [Requirements](#requirements-not-verified) |
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
 ---
 
-## Troubleshooting
+## Troubleshooting - Pinokio
 
 ### git, zip, conda: node.js can't be installed
 
@@ -494,7 +505,29 @@ To fix this issue please:
 
 If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [pinokio-support][pisu] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
 
-| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Troubleshooting](#troubleshooting) | [Applications](#applications) |
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Requirements](#requirements-not-verified) |
+
+---
+
+## Troubleshooting - Applications
+
+### Facefusion doesn't launch after update
+
+Contrary to other Applications on Pinokio, Facefusion releases new versions rather than updates. These new version often need new requirements. These requirements are missing after updating Facefusion.  
+That's why it is needed to run the installation again after updating it. But since the app and most of the requirements are still installed this will be done in no time.  
+Once the installation is finished, Facefusion should launch again.
+
+### Facefusion launches - no video output
+
+In earlier versions of Facefusion the names of the input image and the target video may not contain spaces, special characters or non-Unicode letters. This is the most common reason why videos could not be generated.  
+Since Facefusion 2.6.0 this is no longer a problem.  
+Please press the update button of Facefusion and run the installation again after the update is finished.  
+If you want to keep your Facefusion version, please rename your files accordingly if needed.
+
+If the face recognition works, you will see a preview of the swapped face on the right side of the user interface and a small icon of the reference face in your target video. If there is no preview, please use a front shot close-up of a face that isn't cropped at the edges.  
+Make sure your image and video don't contain any NSFW or gore content, otherwise facefusion's NSFW filter will refuse to create the output.
+
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) |
 
 ---
 
@@ -695,4 +728,5 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 [pisu]: https://discord.com/channels/1121039057993089076/1131623060315844710
 [foru]: https://discord.com/channels/1121039057993089076/1144756843395158147
 [apas]: https://discord.com/channels/1121039057993089076/1170118234113064990
+[tick]: https://discord.com/channels/1121039057993089076/1241679043791945809
 [Disc]: https://discord.gg/GqDW6MWkmV
