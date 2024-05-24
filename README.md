@@ -23,6 +23,9 @@
   - [Applications](#applications)
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
+    - [Loading workflows and installing custom nodes in ComfyUI](#loading-workflows-and-installing-custom-nodes-in-comfyui)
+      - [Installation with workflow](#installation-with-workflow)
+      - [Installation without workflow](#installation-without-workflow)
   - [FAQ](#faq)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
     - [I can't change the location of my home directory](#i-cant-change-the-location-of-my-home-directory)
@@ -290,6 +293,73 @@ SDXL models can be used with sizes up to 1280x1280px.
 ![alt text](Images/A1111_menu.png)
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
+
+---
+
+### Loading workflows and installing custom nodes in ComfyUI
+
+#### Installation with workflow
+
+There are 2 ways to load and use new workflows in ComfyUI:
+
+- Drag and drop the workflow stored on your computer into ComfyUI
+- Click ***Load*** in ComfyUI and select the workflow you want to use
+
+All nodes and their connections to each other will be displayed in ComfyUI.  
+Nodes that are required but not yet installed will be displayed in red and a message will appear informing you that they are missing.
+
+- Click on ***Manager*** in ComfyUI
+- Click ***Install missing custom nodes***
+- Install one node at a time. Once a node is installed, a message will appear at the bottom of the list.
+- When all nodes are installed, click the ***Terminal*** on the left side menu of ComfyUI in Pinokio.
+  *The Restart button in ComfyUI doesn't work!*
+- Stop ComfyUI with the ***Stop*** button at the top of the Terminal
+- Click ***Run*** to restart ComfyUI (same button)
+  The necessary requirements for the nodes will now be installed.
+- In ComfyUI click the Refresh button on top of the user interface to display the installed nodes
+
+#### Installation without workflow
+
+Also custom nodes without workflow can be installed with the Manager
+
+- Click on ***Manager*** in ComfyUI
+- Click ***Install custom nodes***
+- Type the name of the node you want to install in the search field at the top right corner of the node list and press Enter.
+- Make sure that the correct custom nodes are displayed and click ***Install***.  
+  When the installation is complete, a message appears at the bottom of the list.
+  *The Restart button in ComfyUI doesn't work!*
+- Click the ***Terminal*** on the left side menu of ComfyUI in Pinokio.
+- Stop ComfyUI with the ***Stop*** button at the top of the Terminal
+- Click ***Run*** to restart ComfyUI (same button)  
+  The necessary requirements for the node will now be installed.
+- In ComfyUI click the Refresh button on top of the user interface to display the installed nodes
+
+1.) Load workflow  
+![Load workflow](Images/Comfy_load.png)
+
+2.) Select workflow  
+![Select workflow](Images/Comfy_select.png)
+
+3.) Missing nodes  
+![Missing nodes](Images/Comfy_red.png)
+
+4.) Click Manager  
+![Click Manager](Images/Comfy_Manager.png)
+
+5.) Click Install custom nodes  
+![Install custom nodes](Images/Comfy_missing.png)
+
+6.) Install nodes  
+![Install nodes](Images/Comfy_install.png)
+
+7.) Stop ComfyUI  
+![Stop ComfyUI](Images/Comfy_stop.png)
+
+8.) Installation of the requirements at start  
+![Requirements](Images/Comfy_start.png)
+
+9.) Refresh user interface  
+![Refresh user interface](Images/Comfy_refresh.png)
 
 ---
 
