@@ -318,6 +318,12 @@ Nodes that are required but not yet installed will be displayed in red and a mes
   The necessary requirements for the nodes will now be installed.
 - In ComfyUI click the Refresh button on top of the user interface to display the installed nodes
 
+> **Note:** Workflows often require specific models to be downloaded into the appropriate folders.  
+> Read the workflow description carefully and download these models to the correct folders.  
+> Some models can also be downloaded using the Manager (***Install Models***).  
+> The manager will download them directly to the correct folders.  
+> After downloading a model it is necessary to click the ***Refresh*** button of ComfyUI (below the ***Load*** button)
+
 #### Installation without workflow
 
 Also custom nodes without workflow can be installed with the Manager
@@ -333,6 +339,13 @@ Also custom nodes without workflow can be installed with the Manager
 - Click ***Run*** to restart ComfyUI (same button)  
   The necessary requirements for the node will now be installed.
 - In ComfyUI click the Refresh button on top of the user interface to display the installed nodes
+
+> **Note:** Custom nodes sometimes require specific models to be downloaded into the appropriate folders.  
+> Read the workflow description carefully and download these models to the correct folders.  
+> Some models can also be downloaded using the Manager (***Install Models***).  
+> The manager will download them directly to the correct folders.  
+> After downloading a model it is necessary to click the ***Refresh*** button of ComfyUI (below the ***Load*** button)
+
 
 1.) Load workflow  
 ![Load workflow](Images/Comfy_load.png)
