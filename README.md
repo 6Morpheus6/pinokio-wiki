@@ -31,6 +31,9 @@
     - [I can't change the location of my home directory](#i-cant-change-the-location-of-my-home-directory)
     - [What means ***"ENOENT: no such file or directory"***?](#what-means-enoent-no-such-file-or-directory)
     - [How can I update pip? I'm getting this notification all the time](#how-can-i-update-pip-im-getting-this-notification-all-the-time)
+    - [How to apply pip install fixes from GitHub issues in Pinokio (for experienced users only)](#how-to-apply-pip-install-fixes-from-github-issues-in-pinokio-for-experienced-users-only)
+      - [How to install a python package with pip on Mac and Linux](#how-to-install-a-python-package-with-pip-on-mac-and-linux)
+      - [How to install a python package with pip on Windows](#how-to-install-a-python-package-with-pip-on-windows)
   - [Troubleshooting - Pinokio](#troubleshooting---pinokio)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
@@ -92,7 +95,7 @@ Depending on the amount of files this may take some time.
 Visit the Discover page in Pinokio to install new Apps.  
 Click on the Icon of the App you want to Install and click the Download button.  
 Choose the default folder or set a new name for the App folder and click Download.
-Once downloaded, the app appears on the main page of Pinokio.
+Once downloaded, the App appears on the main page of Pinokio.
 Select the App and click ***Install***.
 
 ### Delete installed Apps
@@ -107,7 +110,7 @@ Navigate there with your Explorer or File Manager and in there you will see the 
 - Visit the [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install), select the link for your OS and press the ***Download*** button.
 - Download and install Pinokio. This will replace your old Pinokio version with the new one without touching your installed Apps.
 
-> **Note:** Sometimes it is necessary to reset the `bin` folder (via Settings in Pinokio). This is a common fix for many other problems as well. As it flushes out any problematic packages that may be causing issues. It's generally recommended as the first fix for most problems. It won't affect the settings or saved files of any of your currently installed applications, but it will download and reinstall all necessary requirements again the first time you run an application afterwards.
+> **Note:** Sometimes it is necessary to reset the `bin` folder (via Settings in Pinokio). This is a common fix for many other problems as well. As it flushes out any problematic packages that may be causing issues. It's generally recommended as the first fix for most problems. It won't affect the settings or saved files of any of your currently installed applications, but it will download and reinstall all necessary requirements again the first time you run an Application afterwards.
 
 ### Uninstall Pinokio
 
@@ -163,7 +166,7 @@ Here you can:
 - Change the color theme
 - [Change the location of your Home directory](#change-the-location-where-apps-are-downloaded-and-installed-home)
 - Troubleshoot (Pinokio 1.2.0 an higher)
-  - View or delete the **bin** folder (deleting will remove all pre-requirements. They will be reinstalled with the next application you install)
+  - View or delete the **bin** folder (deleting will remove all pre-requirements. They will be reinstalled with the next Application you install)
   - View or delete the **cache** folder (deleting will remove all temporary files and some default models. These models will be reloaded the next time the App that needs the model is launched)
   - View the **drives** folder (this is the location of the shared custom models used by Stable Diffusion Based Apps)
 
@@ -194,9 +197,9 @@ Click an App on the Pinokio Home screen to see the Application screen
 
 #### Launching the App
 
-To start the application, click the *Start* / *Launch* button and wait until it is fully launched.  
+To start the Application, click the *Start* / *Launch* button and wait until it is fully launched.  
 Once launched, an **Open WebUI** or **Open Session** button will appear to use the App inside of Pinokio.  
-To use the application in your default browser, click the **Open External** button above the user interface.
+To use the Application in your default browser, click the **Open External** button above the user interface.
 
 #### Terminal
 
@@ -210,9 +213,9 @@ To access Pinokio and these Applications via Wifi, it is needed to grant access 
 This can be done by clicking Wifi sharing on the main page of Pinokio at the top right corner and scanning the given QR Code.
 For LAN connections within the local network, this step can be skipped.  
 
-- ***Wifi sharing*** will open the public URL to remote control the app with your mobile phone or tablet.
+- ***Wifi sharing*** will open the public URL to remote control the App with your mobile phone or tablet.
 - ***Open Session*** opens the App only with the local URL.
-- Additionally to the local URL address a proxy address appears in the terminal to access the app within the local network.
+- Additionally to the local URL address a proxy address appears in the terminal to access the App within the local network.
 
 #### Update, Reinstall, Factory Reset and Delete
 
@@ -346,7 +349,6 @@ Also custom nodes without workflow can be installed with the Manager
 > The manager will download them directly to the correct folders.  
 > After downloading a model it is necessary to click the ***Refresh*** button of ComfyUI (below the ***Load*** button)
 
-
 1.) Load workflow  
 ![Load workflow](Images/Comfy_load.png)
 
@@ -419,7 +421,7 @@ Common issues are, *"Module Not Found Error: No module named..."* or *"Out Of Me
   - decreasing the size of an image
   - decreasing the number of images you created simultaneously
   - or using a [smaller model](#download-different-models-for-stable-diffusion-fooocus-and-comfyui) (in some Stable Diffusion based Apps).
-  > In other cases, there is no way to reduce memory consumption, which means that this particular application cannot be used with the current hardware.
+  > In other cases, there is no way to reduce memory consumption, which means that this particular Application cannot be used with the current hardware.
 
 If reinstalling the App in case of a missing module doesn't help, or if you are unsure about the cause, please make a screenshot of the error in the Terminal / Server and post it in [pinokio-support][pisu] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
 
@@ -436,6 +438,124 @@ In fact, all applications come with this message. Even if they are installed man
 If there is an error, your *pip version* is *never the reason* and *upgrading pip* is *never a solution*.
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
+
+### How to apply pip install fixes from GitHub issues in Pinokio (for experienced users only)
+
+Each Application in pinokio is installed in its own environment along with its own set of requirements.
+This ensures that applications don't affect each other and avoids python package conflicts.  
+If you want to install a certain package or another version of an existing package for an Application, it is crucial to activate the respective environment of that App in the first place or the package will be installed into the base environment. (Installing packages in the base environment will not have the desired effect, but it can mess up the base environment and cause problems.)
+
+>**Note: To install a python package into the respective Application environment you need to determine the location of the App and activate the environment.**
+
+On the Settings page of Pinokio you see the path to the `pinokio` folder of your Home Directory. (Pic 1)  
+Applications are installed in `.\pinokio\api`  
+You can look up the path to your Application in your Explorer or Finder (Pic 2)  
+All newer applications have a fairly similar folder structure.  
+You will find the App in `.\pinokio\api<application>.git\app`  
+On Windows the activation file is located in `.\pinokio\api\<application>.git\app\env\Scripts`  
+On Mac and Linux the activation file is located in `./pinokio/api/<application>.git/app/env/bin`  
+***There are some exceptions like Automatic1111 and Forge e.g. The environment of these apps is called `venv`***
+
+On Windows you need Anaconda Powershell Prompt (miniconda) to install a python package.  
+On Mac and Linux you can use your Terminal.
+
+#### How to install a python package with pip on Mac and Linux
+
+- Close Pinokio
+- Open your Terminal
+- Navigate to the application for which you want to install the package. `cd ./pinokio/api/<application>.git/app`  
+  (replace `<application>` with the name of the Application you want to navigate to)
+- Activate the environment of this Application. `source env/bin/activate`
+- Now you should see an **(env)** in front of your prompt. **Don't proceed from here if it is missing!**
+- After the environment is activated successfully, you can install your python package. `pip install <package>`
+- If you want to install a specific version of a package, the command would be `pip install <package>==<version number>`  
+  (replace `<package>` with the package name and `<version number>` with the version number of the package you want to install)
+- If asked, confirm with `y`
+- A message appears indicating that the package was successfully installed.
+- Optional:
+  - To verify the installation you can use the command `pip show <package>`  
+    (replace `<package>` with the name of the package you want to install)
+  - `pip list` lists all packages installed in this specific environment with their corresponding version.
+
+**Example:**
+Lets say your home directory is `/Users/Michael/pinokio` and you want to install `onnxruntime-gpu` in **ComfyUI**.  
+Then it would work like this:
+
+- Close Pinokio
+- Open your Terminal
+- Navigate to ComfyUI `cd /Users/Michael/pinokio/api/comfyui.git/app`
+- Activate the environment `source env/bin/activate`
+- Install onnxruntime-gpu `pip install onnxruntime-gpu`
+- If you wanted to install onnxruntime-gpu 1.17.0 the command would be `pip install onnxruntime-gpu==1.17.0`
+- A message appears indicating that the package was successfully installed.
+- Optional:
+  - To verify the installation you can use the command `pip show onnxruntime-gpu`
+  - `pip list` lists all packages installed in the ComfyUI environment with their corresponding version.
+
+#### How to install a python package with pip on Windows
+
+- Close Pinokio
+- Open Anaconda Powershell Prompt (Type Anaconda Powershell into your Taskbar search field and open it)
+- Navigate to the application for which you want to install the package. `cd .\pinokio\api\<application>.git\app`  
+  (replace `<application>` with the name of the Application you want to navigate to)
+- Activate the environment of this Application. `env\Scripts\activate`
+- Now you should see a **green (env)** in front of your prompt. **Don't proceed from here if it is missing!**
+- After the environment is activated successfully, you can install your python package. `pip install <package>`
+- If you want to install a specific version of a package, the command would be `pip install <package>==<version number>`  
+  (replace `<package>` with the package name and `<version number>` with the version number of the package you want to install)
+- If asked, confirm with `y`
+- A message appears indicating that the package was successfully installed.
+- Optional:
+  - To verify the installation you can use the command `pip show <package>`  
+    (replace `<package>` with the name of the package you want to install)
+  - `pip list` lists all packages installed in the ComfyUI environment with their corresponding version.
+
+**Example:**
+Lets say your home directory is `D:\pinokio` and you want to install `onnxruntime-gpu` in **ComfyUI**.  
+Then it would work like this:
+
+- Close Pinokio
+- Open Anaconda Powershell  (Pic 3)
+- Navigate to ComfyUI `cd D:\pinokio\api\comfyui.git\app` (Pic 4)
+- Activate the environment `env\Scripts\activate` (Pic 5)
+  - A green (env) is displayed in front of your prompt. - **Don't proceed if this (env) is missing!**
+  - If the (env) is white, you are using Anaconda Prompt. Repeat the steps using Anaconda Powershell.
+- Install onnxruntime-gpu `pip install onnxruntime-gpu` (Pic 6)
+- If you wanted to install onnxruntime-gpu 1.17.0 the command would be `pip install onnxruntime-gpu==1.17.0` (Pic 7)
+- A message appears indicating that the package was successfully installed. (Pic 8)
+- Optional:
+  - To verify the installation you can use the command `pip show onnxruntime-gpu` (Pic 9)
+  - `pip list` lists all packages installed in the ComfyUI environment with their corresponding version. (Pic 10)
+
+1.) Look up the path to your Home Directory on the Settings page  
+![Home Directory](Images/Home.png)
+
+2.) Look up the path to your Application in your Explorer or Finder  
+![Application path](Images/Explorer_application.png)
+
+3.) Search for Anaconda Powershell and open it  
+![Open Anaconda Powershell](Images/Anaconda_Powershell.png)
+
+4.) Navigate to ComfyUI  
+![Navigate to ComfyUI](Images/Navigate.png)
+
+5.) Activate the environment  
+![Activate the environment](Images/Activate.png)
+
+6.) Install onnxruntime-gpu  
+![Install onnxruntime-gpu](Images/Install_onnxruntime.png)
+
+7.) Or install a specific version  
+![Install specific version](Images/Install_onnxruntime_version.png)
+
+8.) Successful Installation  
+![Successful Installation](Images/Successful_installation.png)
+
+9.) Verify installation  
+![Verify Installation](Images/pip_show.png)
+
+10.) List packages  
+![List packages](Images/pip_list.png)
 
 ---
 
@@ -597,7 +717,7 @@ If all these steps don't help, please visit the [Pinokio Discord Server][Disc] a
 ### Facefusion doesn't launch after update
 
 Contrary to other Applications on Pinokio, Facefusion releases new versions rather than updates. These new version often need new requirements. These requirements are missing after updating Facefusion.  
-That's why it is needed to run the installation again after updating it. But since the app and most of the requirements are still installed this will be done in no time.  
+That's why it is needed to run the installation again after updating it. But since the App and most of the requirements are still installed this will be done in no time.  
 Once the installation is finished, Facefusion should launch again.
 
 ### Facefusion launches - no video output
