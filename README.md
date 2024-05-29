@@ -468,7 +468,7 @@ On Mac and Linux you can use your Terminal.
 - Activate the environment of this Application. `source env/bin/activate`
 - Now you should see an **(env)** in front of your prompt. **Don't proceed from here if it is missing!**
 - After the environment is activated successfully, you can install your python package. `pip install <package>`
-- If you want to install a specific version of a package, the command would be `pip install <package>==<version number>`  
+- To install a specific version of a package, the command would be `pip install <package>==<version number>`  
   (replace `<package>` with the package name and `<version number>` with the version number of the package you want to install)
 - If asked, confirm with `y`
 - A message appears indicating that the package was successfully installed.
@@ -501,7 +501,7 @@ Then it would work like this:
 - Activate the environment of this Application. `env\Scripts\activate`
 - Now you should see a **green (env)** in front of your prompt. **Don't proceed from here if it is missing!**
 - After the environment is activated successfully, you can install your python package. `pip install <package>`
-- If you want to install a specific version of a package, the command would be `pip install <package>==<version number>`  
+- To install a specific version of a package, the command would be `pip install <package>==<version number>`  
   (replace `<package>` with the package name and `<version number>` with the version number of the package you want to install)
 - If asked, confirm with `y`
 - A message appears indicating that the package was successfully installed.
