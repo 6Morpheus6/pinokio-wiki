@@ -40,9 +40,10 @@
     - [Cuda can't be installed](#cuda-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
     - [*Context:68:3 Error*](#context683-error)
-      - [1.) Uninstalling Visual Studio](#1-uninstalling-visual-studio)
-      - [2.) Manually add Visual Buildtools to your existing Visual Studios version](#2-manually-add-visual-buildtools-to-your-existing-visual-studios-version)
-      - [3.) Manually install Visual Buildtools](#3-manually-install-visual-buildtools)
+      - [1.) Uninstall Visual Studio](#1-uninstall-visual-studio)
+      - [2.) Manually add Visual Buildtools 2019 to your existing Visual Studios version](#2-manually-add-visual-buildtools-2019-to-your-existing-visual-studios-version)
+      - [3.) Manually install Visual Buildtools 2019 with Visual Studio](#3-manually-install-visual-buildtools-2019-with-visual-studio)
+      - [4.) Manually install Visual Buildtools 2019 with Windows Powershell](#4-manually-install-visual-buildtools-2019-with-windows-powershell)
     - [*Node:fs:207:21 Error*](#nodefs20721-error)
     - [Module Not Found Error](#module-not-found-error)
   - [Troubleshooting - Applications](#troubleshooting---applications)
@@ -618,7 +619,7 @@ There are 3 ways to fix this:
 
 > Make sure you have at least 15 GB space on your system drive
 
-#### 1.) Uninstalling Visual Studio
+#### 1.) Uninstall Visual Studio
 
 > *This should only be done if Visual Studio isn't needed by any other program on your computer*
 
@@ -635,7 +636,7 @@ There are 3 ways to fix this:
 
 ---
 
-#### 2.) Manually add Visual Buildtools to your existing Visual Studios version
+#### 2.) Manually add Visual Buildtools 2019 to your existing Visual Studios version
 
 - a.) Start the Visual Studio Installer - *Screenshot 1.) a.)*
 - b.) Click "Modify"
@@ -658,7 +659,7 @@ There are 3 ways to fix this:
 
 ---
 
-#### 3.) Manually install Visual Buildtools
+#### 3.) Manually install Visual Buildtools 2019 with Visual Studio
 
 - a.) Start the Visual Studio Installer - *Screenshot 1.) a.)*
 - b.) Click the "Available" tab and choose "Visual Studio Community 2022" and click "Install"
@@ -674,6 +675,36 @@ There are 3 ways to fix this:
 - d.) Click the "Install" button at the bottom right corner to install the Visual Buildtools
 
 3.) b.) Available Tab![3.) b.) Available Tab](Images/available.png "Available Tab")
+
+#### 4.) Manually install Visual Buildtools 2019 with Windows Powershell
+
+- a.) Look up the path to your Home Directory on the Settings page of Pinokio
+- b.) Open Windows Powershell as Administrator (right click the windows button on your taskbar and select it)
+- c.) Navigate to `.\pinokio\bin` - Type `cd <path to your home directory>\bin`  
+  (replace `<path to your home directory>` with the path you see on the Settings page)
+  - >Let's say the path to your Home Directory is `D:\pinokio`, the command would be `cd D:\pinokio\bin`
+- d.) Copy / paste the command below into Windows Powershell (**CTRL + C** or copy button to copy,  **CTR + V** to paste)
+
+```bin
+.\vs_buildtools.exe --passive --wait --includeRecommended --nocache --add Microsoft.VisualStudio.Workload.VCTools
+```
+
+- e.) The Visual Installer should now launch and install Visual Buildtools 2019 on your system drive.
+
+4.) a.) Look up your Home Directory  
+![Home Directory](Images/Home.png)
+
+4.) b.) Open Windows Powershell as Administrator  
+![Open Windows Powershell](Images/Select_Powershell.png)
+
+4.) c.) Navigate to the `bin` folder  
+![Navigate to bin](Images/Navigate_Powershell.png)
+
+4.) d.) Copy / Paste the command to install vs buildtools into the Powershell  
+![Copy command](Images/Copy_command.png)
+
+4.) e.) Installation of visual buildtools 2019  
+![Installation](Images/vs_installation.png)
 
 ---
 
