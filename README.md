@@ -46,8 +46,8 @@
       - [4.) Manually install Visual Buildtools 2019 with Windows Powershell](#4-manually-install-visual-buildtools-2019-with-windows-powershell)
     - [*Node:fs:207:21 Error*](#nodefs20721-error)
     - [Registry can't be "installed"](#registry-cant-be-installed)
-    - [Module Not Found Error](#module-not-found-error)
   - [Troubleshooting - Applications](#troubleshooting---applications)
+    - [Module Not Found Error](#module-not-found-error)
     - [Facefusion doesn't launch after update](#facefusion-doesnt-launch-after-update)
     - [Facefusion launches - no video output](#facefusion-launches---no-video-output)
   - [Requirements (not verified)](#requirements-not-verified)
@@ -751,6 +751,12 @@ Therefore you need to:
 
 ---
 
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Requirements](#requirements-not-verified) |
+
+---
+
+## Troubleshooting - Applications
+
 ### Module Not Found Error
 
 There are different reasons for the ***"Module Not Found Error: No module named..."*** error.
@@ -772,12 +778,6 @@ To fix this issue please:
 - Install the App again
 
 If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [pinokio-support][pisu] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
-
-| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Requirements](#requirements-not-verified) |
-
----
-
-## Troubleshooting - Applications
 
 ### Facefusion doesn't launch after update
 
