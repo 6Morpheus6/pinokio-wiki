@@ -363,8 +363,8 @@ Also custom nodes without workflow can be installed with the Manager
 4.) Click Manager  
 ![Click Manager](Images/Comfy_Manager.png)
 
-5.) Click Install custom nodes  
-![Install custom nodes](Images/Comfy_missing.png)
+5.) Click Install Missing Custom Nodes  
+![Click Install Missing Custom Nodes](Images/Comfy_missing.png)
 
 6.) Install nodes  
 ![Install nodes](Images/Comfy_install.png)
