@@ -37,7 +37,6 @@
   - [Troubleshooting - Pinokio](#troubleshooting---pinokio)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
-    - [Cuda can't be installed](#cuda-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
     - [*Context:68:3 Error*](#context683-error)
       - [1.) Uninstall Visual Studio](#1-uninstall-visual-studio)
@@ -46,6 +45,7 @@
       - [4.) Manually install Visual Buildtools 2019 with Windows Powershell](#4-manually-install-visual-buildtools-2019-with-windows-powershell)
     - [*Node:fs:207:21 Error*](#nodefs20721-error)
     - [Registry can't be "installed"](#registry-cant-be-installed)
+    - [Cuda can't be installed](#cuda-cant-be-installed)
   - [Troubleshooting - Applications](#troubleshooting---applications)
     - [Module Not Found Error](#module-not-found-error)
     - [Facefusion doesn't launch after update](#facefusion-doesnt-launch-after-update)
@@ -600,16 +600,6 @@ To solve this issue, it's needed to install the Requirements again.
 
 ---
 
-### Cuda can't be installed
-
-This can happen due to outdated or wrong NVIDIA drivers, or a corrupted cuda library download
-
-- Please check NVIDIA Experience for for new driver updates and update your driver if possible.
-- Delete the `bin` folder `.\pinokio\bin`
-- Install your Application or start an installed Application to trigger the installation of the Requirements again.
-
----
-
 ### Visual Buildtools fails to install on Windows
 
 ### *Context:68:3 Error*
@@ -676,6 +666,8 @@ There are 3 ways to fix this:
 - d.) Click the "Install" button at the bottom right corner to install the Visual Buildtools
 
 3.) b.) Available Tab![3.) b.) Available Tab](Images/available.png "Available Tab")
+
+---
 
 #### 4.) Manually install Visual Buildtools 2019 with Windows Powershell
 
@@ -748,6 +740,16 @@ Therefore you need to:
 
 4.) Set value to 1  
 ![Set value](Images/Set_value.png)
+
+---
+
+### Cuda can't be installed
+
+This can happen due to outdated or wrong NVIDIA drivers, or a corrupted cuda library download
+
+- Please check NVIDIA Experience for for new driver updates and update your driver if possible.
+- Delete the `bin` folder `.\pinokio\bin`
+- Install your Application or start an installed Application to trigger the installation of the Requirements again.
 
 ---
 
