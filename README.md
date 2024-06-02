@@ -45,6 +45,7 @@
       - [3.) Manually install Visual Buildtools 2019 with Visual Studio](#3-manually-install-visual-buildtools-2019-with-visual-studio)
       - [4.) Manually install Visual Buildtools 2019 with Windows Powershell](#4-manually-install-visual-buildtools-2019-with-windows-powershell)
     - [*Node:fs:207:21 Error*](#nodefs20721-error)
+    - [Registry can't be "installed"](#registry-cant-be-installed)
     - [Module Not Found Error](#module-not-found-error)
   - [Troubleshooting - Applications](#troubleshooting---applications)
     - [Facefusion doesn't launch after update](#facefusion-doesnt-launch-after-update)
@@ -496,7 +497,7 @@ Then it would work like this:
 #### How to install a python package with pip on Windows
 
 - Close Pinokio
-- Open Anaconda Powershell Prompt (Type Anaconda Powershell into your Taskbar search field and open it)
+- Open Anaconda Powershell Prompt (Type "Anaconda Powershell" into your Taskbar search field and open it)
 - Navigate to the application for which you want to install the package. `cd .\pinokio\api\<application>.git\app`  
   (replace `<application>` with the name of the Application you want to navigate to)
 - Activate the environment of this Application. `env\Scripts\activate`
@@ -714,6 +715,39 @@ There are 3 ways to fix this:
 
 Visual buildtools fails due to the **node:fs:207:21** error, if a folder name in the path to your home directory contains a space, special characters or non-Unicode letters.  
 In this case please [change the path to your Pinokio home directory](#change-the-location-where-apps-are-downloaded-and-installed-home).
+
+---
+
+### Registry can't be "installed"
+
+It's rather "editing" the registry than an installation.  
+By default on Windows you can't access a path that is longer than 260 characters, which is necessary for several App installations.
+That's why Pinokio enables LONG PATHS on Windows. If it fails, it can be done manually.  
+Therefore you need to:
+
+- Open the registry (Type "regedit" in the search field of your taskbar and select it)
+- A popup window from Windows appears asking for permission. Click ***OK***
+- Copy / Paste the path below into the address field at the top of the registry and press ***Enter***  
+  (CTRL + C or copy button to copy, CTRL + V to paste)  
+  
+  ```bin
+  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem
+  ```
+
+- Double click *LongPathsEnabled* in the list
+- In the popup window change the ***Value*** from 0 to 1 and click ***OK***
+
+1.) Search for Registry and open it  
+![Open Registry](Images/Open_registry.png)
+
+2.) Enter the path into the address field  
+![Enter path](Images/Registry_path.png)
+
+3.) Double click LongPathsEnabled  
+![Double click LongPathsEnabled](Images/Doubleclick_LongPaths.png)
+
+4.) Set value to 1  
+![Set value](Images/Set_value.png)
 
 ---
 
