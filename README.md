@@ -999,4 +999,4 @@ Make sure your image and video don't contain any NSFW or gore content, otherwise
 [foru]: https://discord.com/channels/1121039057993089076/1144756843395158147
 [apas]: https://discord.com/channels/1121039057993089076/1170118234113064990
 [tick]: https://discord.com/channels/1121039057993089076/1241679043791945809
-[Disc]: https://discord.gg/GqDW6MWkmV
+[Disc]: https://discord.com/channels/1121039057993089076/1212816298208141353
