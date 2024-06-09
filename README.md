@@ -144,7 +144,7 @@ If you find a bug, if something doesn't work as expected, or if you're having tr
   - Screenshots of the issue or error (if relevant)
 - Advice on how to use Applications, can be found in [app-assistance][apas].
 
-> **Note:** The channel links above will only work if you have joined the [Pinokio Discord Server][Disc] in the first place.
+> **Note:** The channel links provided above will only work if you have joined the [Pinokio Discord Server][Disc] in the first place.
 
 | [Top](#pinokio-wiki) | [General](#general) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
