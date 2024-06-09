@@ -133,16 +133,18 @@ This will only uninstall Pinokio ***not*** your Apps. Your Home directory will s
 
 If you find a bug, if something doesn't work as expected, or if you're having trouble running an Application, please visit the [Pinokio Discord Server][Disc] and post your issue in one of the #support channels.
 
-- Describe your issue in [#pinokio-support][pisu] and post a screenshot if possible (the quickest way to get help).
-- Or hit the ***Report Bug button*** at the top right corner on the main page of Pinokio and post your logs in the [#forum][foru] and describe the bug or issue.
-- You can also [create a ticket][tick]. Tickets and the information provided there can only be seen by admins.  
-  Provide as much information as possible to get quick help.  
+- Describe your issue in [pinokio-support][pisu] and post a screenshot if possible (the quickest way to get help).
+- Or hit the ***Report Bug button*** at the top right corner on the main page of Pinokio and post your logs in the [forum][foru] and describe the bug or issue.
+- You can also [create a ticket][tick]. Tickets and the information they contain can only be viewed by admins.  
+  After creating a ticket, please provide as much information as possible to get quick help.  
   Such as:
   - A brief description of your issue or error
   - OS and GPU
   - **Most important**: Your Logs `logs.zip` (Logs will be generated when you hit the report bug button and can be saved anywhere on your computer)
   - Screenshots of the issue or error (if relevant)
-- Advice on how to use Applications, can be found in [#app-Assistance][apas].
+- Advice on how to use Applications, can be found in [app-assistance][apas].
+
+> **Note:** The channel links above will only work if you have joined the [Pinokio Discord Server][Disc] in the first place.
 
 | [Top](#pinokio-wiki) | [General](#general) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
@@ -168,9 +170,9 @@ Here you can:
 - Change the color theme
 - [Change the location of your Home directory](#change-the-location-where-apps-are-downloaded-and-installed-home)
 - Troubleshoot (Pinokio 1.2.0 an higher)
-  - View or delete the **bin** folder (deleting will remove all pre-requirements. They will be reinstalled with the next Application you install)
-  - View or delete the **cache** folder (deleting will remove all temporary files and some default models. These models will be reloaded the next time the App that needs the model is launched)
-  - View the **drives** folder (this is the location of the shared custom models used by Stable Diffusion Based Apps)
+  - View or delete the `bin` folder (deleting will remove all pre-requirements. They will be reinstalled with the next Application you install)
+  - View or delete the `cache` folder (deleting will remove all temporary files and some default models. These models will be reloaded the next time the App that needs the model is launched)
+  - View the `drive` folder (this is the location of files shared by Pinokio Applications to reduce disk space, such as python packages of the different environments and custom models, Loras, Upscaler and controlnet models used by Stable Diffusion based Apps)
 
 ### Discover Page
 
@@ -186,10 +188,11 @@ All downloaded Apps will be displayed on the Pinokio home screen and can be inst
 > - A yellow banner with a corresponding message appears on the main page of Pinokio if your Pinokio version doesn't support the Script Version of an installed Application.
 > In that case please [Upgrade Pinokio](#upgrade-pinokio) to the latest version.
 
-All needed components will be installed with your first App.  
-**NOTE: It is highly recommended to switch off your antivirus, during this first installation to avoid unnecessary subsequent troubleshooting.**
+All requirements will be installed with your first App.
 
-Applications not created by a verified publishers and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can still be installed with the ***Download from URL*** button at the top of the Discover page.
+> **Note: It is highly recommended to switch off your antivirus, during this first installation to avoid unnecessary subsequent troubleshooting.**
+
+Applications not created by verified publishers and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can still be installed with the ***Download from URL*** button at the top of the Discover page.
 > **Note:** Only Applications with a `pinokio.js` and respective `install.json` or `install.js` and `start.json` or `start.js` scripts can be installed with Pinokio.  
 To find out if an Application on GitHub that doesn't appear on the Discover page can be installed with Pinokio, have a look on the GitHub repo and check for these scripts on the main page of the project.  
 
@@ -999,4 +1002,4 @@ Make sure your image and video don't contain any NSFW or gore content, otherwise
 [foru]: https://discord.com/channels/1121039057993089076/1144756843395158147
 [apas]: https://discord.com/channels/1121039057993089076/1170118234113064990
 [tick]: https://discord.com/channels/1121039057993089076/1241679043791945809
-[Disc]: https://discord.com/channels/1121039057993089076/1212816298208141353
+[Disc]: https://discord.gg/TQdNwadtE4
