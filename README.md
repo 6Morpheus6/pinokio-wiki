@@ -35,6 +35,8 @@
       - [How to install a python package with pip on Mac and Linux](#how-to-install-a-python-package-with-pip-on-mac-and-linux)
       - [How to install a python package with pip on Windows](#how-to-install-a-python-package-with-pip-on-windows)
   - [Troubleshooting - Pinokio](#troubleshooting---pinokio)
+    - [White screen when visiting the Discover Page](#white-screen-when-visiting-the-discover-page)
+    - [White screen when downloading an Application](#white-screen-when-downloading-an-application)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
@@ -74,7 +76,10 @@
 
 ### Install Pinokio
 
-- Follow the instructions in [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install) to install Pinokio for [Windows](https://program.pinokio.computer/#/?id=windows), [Mac](https://program.pinokio.computer/#/?id=mac) or [Linux](https://program.pinokio.computer/#/?id=linux).
+- Please follow the instructions in [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install) to install Pinokio for [Windows](https://program.pinokio.computer/#/?id=windows), [Mac](https://program.pinokio.computer/#/?id=mac) or [Linux](https://program.pinokio.computer/#/?id=linux).
+
+> **Note:** Currently, **Pinokio is not supported on Win 11 Canary and Win 11 Dev build** since it causes a white screen when downloading Apps from the Discover Page or crashes Pinokio when trying to install the requirements.  
+> This crash is caused by ntdll.dll, a core library of Windows. Despite numerous attempts to find a workaround for this problem, there is nothing that can be done. The only way to use Pinokio is to revert to a stable Windows 11 build.
 
 ### Change the location where Apps are downloaded and installed (Home)
 
@@ -565,6 +570,19 @@ Then it would work like this:
 ---
 
 ## Troubleshooting - Pinokio
+
+### White screen when visiting the Discover Page
+
+Visiting the Discover page to download Applications is the only option that requires an Internet connection.  
+In some cases, an antivirus program, VPN, proxy, or firewall restrictions on a corporate network may block this connection.  
+
+- Please disable all of these or contact your supervisor.
+- Restart Pinokio
+- Find the culprit and whitelist Pinokio or disable the responsible service while visiting the Discover Page
+
+### White screen when downloading an Application
+
+If you can visit the Discover Page, but get a white screen when you try to download an Application, then you are probably using Windows 11 Canary or a Windows 11 Dev build. Both versions are known to crash Pinokio or make it impossible to download Applications from the Discover Page. The only workaround is to revert to a stable Windows 11 build.
 
 ### git, zip, conda: node.js can't be installed
 
