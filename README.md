@@ -305,8 +305,6 @@ SDXL models can be used with sizes up to 1280x1280px.
 3.) Refresh and select  
 ![alt text](Images/A1111_menu.png)
 
-| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
-
 ---
 
 ### Loading workflows and installing custom nodes in ComfyUI
@@ -386,6 +384,8 @@ Also custom nodes without workflow can be installed with the Manager
 9.) Refresh user interface  
 ![Refresh user interface](Images/Comfy_refresh.png)
 
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
+
 ---
 
 ## FAQ
@@ -447,7 +447,7 @@ This message can be ignored. It is just information that a newer pip version is 
 In fact, all applications come with this message. Even if they are installed manually.  
 If there is an error, your *pip version* is *never the reason* and *upgrading pip* is *never a solution*.
 
-| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
+---
 
 ### How to apply pip install fixes from GitHub issues in Pinokio (for experienced users only)
 
@@ -566,6 +566,8 @@ Then it would work like this:
 
 10.) List packages  
 ![List packages](Images/pip_list.png)
+
+| [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
 ---
 
@@ -771,8 +773,6 @@ This can happen due to outdated or wrong NVIDIA drivers, or a corrupted cuda lib
 - Please check NVIDIA Experience for for new driver updates and update your driver if possible.
 - Delete the `bin` folder `.\pinokio\bin`
 - Install your Application or start an installed Application to trigger the installation of the Requirements again.
-
----
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Requirements](#requirements-not-verified) |
 
