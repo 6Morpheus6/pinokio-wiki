@@ -79,7 +79,7 @@
 - Please follow the instructions in [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install) to install Pinokio for [Windows](https://program.pinokio.computer/#/?id=windows), [Mac](https://program.pinokio.computer/#/?id=mac) or [Linux](https://program.pinokio.computer/#/?id=linux).
 
 > **Note:** Currently, **Pinokio is not supported on Win 11 Canary and Win 11 Dev build** since it causes a white screen when downloading Apps from the Discover Page or crashes Pinokio when trying to install the requirements.  
-> This crash is caused by ntdll.dll, a core library of Windows. Despite numerous attempts to find a workaround for this problem, there is nothing that can be done. The only way to use Pinokio is to revert to a stable Windows 11 build.
+> This crash is caused by ntdll.dll, a core Windows library. Despite numerous attempts to find a workaround for this problem, there is nothing that can be done. The only way to use Pinokio is to revert to a stable Windows 11 build.
 
 ### Change the location where Apps are downloaded and installed (Home)
 
