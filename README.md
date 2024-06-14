@@ -27,6 +27,7 @@
       - [Installation with workflow](#installation-with-workflow)
       - [Installation without workflow](#installation-without-workflow)
   - [FAQ](#faq)
+    - [Pinokio is damaged (Mac)](#pinokio-is-damaged-mac)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
     - [I can't change the location of my home directory](#i-cant-change-the-location-of-my-home-directory)
     - [What means ***"ENOENT: no such file or directory"***?](#what-means-enoent-no-such-file-or-directory)
@@ -389,6 +390,19 @@ Also custom nodes without workflow can be installed with the Manager
 ---
 
 ## FAQ
+
+### Pinokio is damaged (Mac)
+
+Please follow the steps in [Pinokio tutorial](https://program.pinokio.computer/#/?id=mac) to install Pinokio on your Mac.
+
+- Drag the Pinokio App into the Application folder
+- Open the file `patch.command`
+- Enter your password
+  > This step is crucial to tell your Mac to grant permission for Pinokio.  
+  > Entering your password is invisible. Just type your password and press Enter.
+- Now you can start Pinokio in your Applications folder
+
+---
 
 ### What does ***"Do NOT use exFAT drives"*** on the Setting page mean?
 
