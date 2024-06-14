@@ -23,6 +23,7 @@
   - [Applications](#applications)
     - [Stable Diffusion Models](#stable-diffusion-models)
     - [Download different models for Stable Diffusion, Fooocus and ComfyUI](#download-different-models-for-stable-diffusion-fooocus-and-comfyui)
+    - [Getting started with ComfyUI](#getting-started-with-comfyui)
     - [Loading workflows and installing custom nodes in ComfyUI](#loading-workflows-and-installing-custom-nodes-in-comfyui)
       - [Installation with workflow](#installation-with-workflow)
       - [Installation without workflow](#installation-without-workflow)
@@ -308,6 +309,32 @@ SDXL models can be used with sizes up to 1280x1280px.
 
 ---
 
+### Getting started with ComfyUI
+
+ComfyUI is perhaps the most complex, but also the most versatile local image and video generation App available.
+You can do anything with it, but you need to know what you are doing!  
+There are great workflows on the internet that can be used without connecting any nodes by yourself. But none of them work "out of the box" and deliver  the desired output without tweaking the settings in those nodes.
+In addition it is necessary to download and select the correct models in the corresponding model loader nodes, otherwise errors are inevitable.  
+To save yourself a lot of time jumping from one error message to the next, it's highly recommended to start at the beginning and **learn some basics**.
+
+A good way to start are these YouTube tutorials. If you watch the first videos in the right order, you'll quickly get a basic understanding of how ComfyUI works and also how to understand, fix and prevent any errors.
+> **Note: ALWAYS** install custom nodes with the **ComfyUI Manager**, even if a video shows you how to clone the nodes into ComfyUI.
+The Manager is the **easiest** and **safest way** to install, uninstall and organize your nodes. It is pre-installed in your ComfyUI.  
+How to [install custom nodes](#loading-workflows-and-installing-custom-nodes-in-comfyui) using the Manager is described later in this Wiki.
+
+From beginner to expert. German tutorial with English subs. Best place to start, especially if ComfyUI is your first image generation App.  
+[ComfyUI Tutorial - A Latent Place](https://youtu.be/HOIeLNNhdaU?si=Imvo35ZOo0dim6K3&t=628)
+
+English tutorial playlist with 8 videos. From beginner to advanced.  
+[Learn ComfyUI - Olivio Sarikas](https://youtu.be/LNOlk8oz1nY?si=cT2wb740Xpglf15e&t=343)
+
+ComfyUI Guides - Workflow, node explanation, example workflows and shortcuts  
+[Beginner's Guide to ComfyUI - Stable Diffusion Art](https://stable-diffusion-art.com/comfyui/)  
+[ComfUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)  
+[ComfyUI Shortcuts](https://blenderneko.github.io/ComfyUI-docs/Interface/Shortcuts/)
+
+---
+
 ### Loading workflows and installing custom nodes in ComfyUI
 
 #### Installation with workflow
@@ -393,7 +420,7 @@ Also custom nodes without workflow can be installed with the Manager
 
 ### Pinokio is damaged (Mac)
 
-Please follow the steps in [Pinokio tutorial](https://program.pinokio.computer/#/?id=mac) to install Pinokio on your Mac.
+Please follow the steps in the [Pinokio tutorial](https://program.pinokio.computer/#/?id=mac) to install Pinokio on your Mac.
 
 - Drag the Pinokio App into the Application folder
 - Open the file `patch.command`
