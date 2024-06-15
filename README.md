@@ -27,6 +27,7 @@
     - [Loading workflows and installing custom nodes in ComfyUI](#loading-workflows-and-installing-custom-nodes-in-comfyui)
       - [Installation with workflow](#installation-with-workflow)
       - [Installation without workflow](#installation-without-workflow)
+    - [Update Comfyui and nodes](#update-comfyui-and-nodes)
   - [FAQ](#faq)
     - [Pinokio is damaged (Mac)](#pinokio-is-damaged-mac)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
@@ -313,7 +314,7 @@ SDXL models can be used with sizes up to 1280x1280px.
 
 ComfyUI is perhaps the most complex, but also the most versatile local image and video generation App available.
 You can do anything with it, but you need to know what you are doing!  
-There are great workflows on the internet that can be used without connecting any nodes by yourself. But none of them work "out of the box" and deliver  the desired output without tweaking the settings in those nodes.
+There are great workflows on the internet that can be used without connecting any nodes by yourself. But none of them work "out of the box" and deliver the desired output without tweaking the settings in those nodes.
 In addition it is necessary to download and select the correct models in the corresponding model loader nodes, otherwise errors are inevitable.  
 To save yourself a lot of time jumping from one error message to the next, it's highly recommended to start at the beginning and **learn some basics**.
 
@@ -330,7 +331,7 @@ English tutorial playlist with 8 videos. From beginner to advanced.
 
 ComfyUI Guides - Workflow, node explanation, example workflows and shortcuts  
 [Beginner's Guide to ComfyUI - Stable Diffusion Art](https://stable-diffusion-art.com/comfyui/)  
-[ComfUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)  
+[ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)  
 [ComfyUI Shortcuts](https://blenderneko.github.io/ComfyUI-docs/Interface/Shortcuts/)
 
 ---
@@ -352,10 +353,10 @@ Nodes that are required but not yet installed will be displayed in red and a mes
 - Install one node at a time. Once a node is installed, a message will appear at the bottom of the list.
 - When all nodes are installed, click the ***Terminal*** on the left side menu of ComfyUI in Pinokio.
   *The Restart button in ComfyUI doesn't work!*
-- Stop ComfyUI with the ***Stop*** button at the top of the Terminal
-- Click ***Run*** to restart ComfyUI (same button)
+- Stop ComfyUI with the ***Stop*** button at the top of the Terminal.
+- Click ***Run*** to restart ComfyUI.  
   The necessary requirements for the nodes will now be installed.
-- In ComfyUI click the Refresh button on top of the user interface to display the installed nodes
+- In ComfyUI click the ***Refresh*** button at the top of the user interface to display the installed nodes.
 
 > **Note:** Workflows often require specific models to be downloaded into the appropriate folders.  
 > Read the workflow description carefully and download these models to the correct folders.  
@@ -374,10 +375,10 @@ Also custom nodes without workflow can be installed with the Manager
   When the installation is complete, a message appears at the bottom of the list.
   *The Restart button in ComfyUI doesn't work!*
 - Click the ***Terminal*** on the left side menu of ComfyUI in Pinokio.
-- Stop ComfyUI with the ***Stop*** button at the top of the Terminal
-- Click ***Run*** to restart ComfyUI (same button)  
+- Stop ComfyUI with the ***Stop*** button at the top of the Terminal.
+- Click ***Run*** to restart ComfyUI.  
   The necessary requirements for the node will now be installed.
-- In ComfyUI click the Refresh button on top of the user interface to display the installed nodes
+- In ComfyUI click the ***Refresh*** button at the top of the user interface to display the installed nodes.
 
 > **Note:** Custom nodes sometimes require specific models to be downloaded into the appropriate folders.  
 > Read the workflow description carefully and download these models to the correct folders.  
@@ -411,6 +412,22 @@ Also custom nodes without workflow can be installed with the Manager
 
 9.) Refresh user interface  
 ![Refresh user interface](Images/Comfy_refresh.png)
+
+---
+
+### Update Comfyui and nodes
+
+ComfyUI and the custom nodes are constantly evolving. It is advisable to keep both up to date and can fix red nodes and other bugs.  
+To update ComfyUI and the custom nodes:
+
+- Click the ***Manager*** in Comfyui
+- Click ***Fetch Updates*** (A message will inform you when fetching is done)
+- Click ***Update all*** (ComfyUI will ask you to restart when the Update is done)  
+  *The Restart button in ComfyUI doesn't work!*
+- Click the ***Terminal*** on the left side menu of ComfyUI in Pinokio.
+- Stop ComfyUI with the ***Stop*** button at the top of the Terminal.
+- Click ***Run*** to restart ComfyUI.
+- In ComfyUI click the ***Refresh*** button on top of the user interface to display the installed nodes.
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
