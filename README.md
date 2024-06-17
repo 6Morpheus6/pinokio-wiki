@@ -28,6 +28,9 @@
       - [Installation with workflow](#installation-with-workflow)
       - [Installation without workflow](#installation-without-workflow)
     - [Update Comfyui and nodes](#update-comfyui-and-nodes)
+    - [Chat Applications](#chat-applications)
+      - [Download Ollama Models with Lobe, Open UI and Chatbot-Ollama](#download-ollama-models-with-lobe-open-ui-and-chatbot-ollama)
+      - [Use Ollama Models in Lobe](#use-ollama-models-in-lobe)
   - [FAQ](#faq)
     - [Pinokio is damaged (Mac)](#pinokio-is-damaged-mac)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
@@ -154,6 +157,8 @@ If you find a bug, if something doesn't work as expected, or if you're having tr
 
 > **Note:** The channel links provided above will only work if you have joined the [Pinokio Discord Server][Disc] in the first place.
 
+---
+
 | [Top](#pinokio-wiki) | [General](#general) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
 ---
@@ -269,6 +274,8 @@ An exception is *HF_Home* and *XDG_DATA_HOME*. Some Apps download their default 
 
 - The **drive** folder `.\pinokio\dirve` is a shared models folder used by Stable Diffusion based Applications to save drive space.
   Models, Loras, Embeddings and many more downloaded and stored in their according folders in `.\pinokio\drive\drives\peers\d1704581225212\` can be used by Automatic1111, Fooocus, and ComfyUI without moving or copying the models.
+
+---
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
@@ -428,6 +435,90 @@ To update ComfyUI and the custom nodes:
 - Stop ComfyUI with the ***Stop*** button at the top of the Terminal.
 - Click ***Run*** to restart ComfyUI.
 - In ComfyUI click the ***Refresh*** button on top of the user interface to display the installed nodes.
+
+---
+
+### Chat Applications
+
+Newer Chat Apps like Chatbot-Ollama, Devika, OpenUI, Open WebUI and Lobe can be either used with API keys, or the Ollama backend.
+Therefore Ollama needs to be downloaded and installed separately on your computer.  
+To use these Applications with Ollama please:
+
+- Download the right version for you computer from the [Ollama homepage](https://ollama.com/) and install it.
+- Restart Pinokio to connect it with the backend (only needs to be done the first time after installing Ollama)
+
+> **Note:** Pinokio will ask you to start Ollama each time you are using one of these applications. But since Ollama always runs in the background after you installed it, you don't have to bother about it anymore. (Ollama doesn't consume performance as long as it is idle.)
+
+---
+
+#### Download Ollama Models with Lobe, Open UI and Chatbot-Ollama
+
+Ollama Models for these Applications can be downloaded on the left side menu.
+
+- Click ***Download Models***
+- Select the model you want to download
+
+The terminal will display the download progress. Downloading models may take a while, depending on your Internet speed. Keep an eye on the Terminal messages. If you don't see a progress bar, the download is failing. Please make sure you have a good internet connection and followed the steps in [Chat Applications](#chat-applications) to install the Ollama backend before.
+
+- Start the Application
+- Click ***Next*** since Ollama is still running
+- Select the model in the drop down
+  - In **Chatbot-Ollama** the dropdown menu is at the top
+  - In **OpenUI** the models can be selected in the Settings
+  - How to use Ollama models in **Lobe** can be found later in this Wiki
+
+1.) Click Download Models and select the model you want to download  
+![Download Models](Images/Download_models.png)
+![Download your Model](Images/Download_model.png)
+
+2.) Download progress  
+![Download progress](Images/Download_progress.png)
+
+3.) Download Success  
+![Download Success](Images/Download_success.png)
+
+4.) Selecting a model in Chatbot-Ollama  
+![Selecting model - Chatbot-Ollama](Images/Select_model-Chatbot.png)
+
+5.) Selecting a model in OpenUI  
+![Select model - OpenUI](Images/Select_model-OpenUI.png)
+
+---
+
+#### Use Ollama Models in Lobe
+
+Lobe Chat requires some more steps to use Ollama models
+
+- Open ***Lobe Settings*** (Click the Smiley at the top left corner of the chat window)
+- Click ***Language Model***
+- Activate ***Ollama*** and ***Use Client-Side Fetching Mode***
+- Check the connectivity
+  - Passing this test tells you that Lobe is connected with the Ollama backend
+  - If it fails, please make sure the Ollama backend is installed and running. Otherwise follow the steps in [Chat Applications](#chat-applications)
+- Click ***Get Models List*** to update Lobe with all newly downloaded models
+- Click on the dropdown menu to select your models
+  - All selected models will be displayed in the dropdown menu
+  - All displayed models will be checked in the list
+- Close the Settings and select the model you want to use at the top of Lobe
+  - The dropdown menu displays all models you've selected in the settings
+- Use your model and start chatting
+
+1.) Open Lobe Settings  
+![Open Lobe Settings](Images/Lobe_settings.png)
+
+2.) Activate, Check, Update, Select  
+![Activate, Check, Update, Select](Images/Lobe_Ollama_settings.png)
+
+3.) Select your models  
+![Select your models](Images/Lobe_select_models.png)
+
+4.) Select your model
+![Select your model](Images/Lobe_select_model.png)
+
+5.) Start chatting
+![Start chatting](Images/Lobe_use_model.png)
+
+---
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
@@ -624,6 +715,8 @@ Then it would work like this:
 
 10.) List packages  
 ![List packages](Images/pip_list.png)
+
+---
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Applications](#troubleshooting---applications) | [Requirements](#requirements-not-verified) |
 
@@ -832,6 +925,8 @@ This can happen due to outdated or wrong NVIDIA drivers, or a corrupted cuda lib
 - Delete the `bin` folder `.\pinokio\bin`
 - Install your Application or start an installed Application to trigger the installation of the Requirements again.
 
+---
+
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Requirements](#requirements-not-verified) |
 
 ---
@@ -874,7 +969,9 @@ Please press the update button of Facefusion and run the installation again afte
 If you want to keep your Facefusion version, please rename your files accordingly if needed.
 
 If the face recognition works, you will see a preview of the swapped face on the right side of the user interface and a small icon of the reference face in your target video. If there is no preview, please use a front shot close-up of a face that isn't cropped at the edges.  
-Make sure your image and video don't contain any NSFW or gore content, otherwise facefusion's NSFW filter will refuse to create the output.
+Make sure your image and video don't contain any NSFW or gore content, otherwise Facefusion's NSFW filter will refuse to create the output.
+
+---
 
 | [Top](#pinokio-wiki) | [General](#general) | [Pinokio](#pinokio) | [Applications](#applications) | [FAQ](#faq) | [Troubleshooting - Pinokio](#troubleshooting---pinokio) | [Troubleshooting - Applications](#troubleshooting---applications) |
 
