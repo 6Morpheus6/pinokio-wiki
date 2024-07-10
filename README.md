@@ -29,8 +29,9 @@
       - [Installation without workflow](#installation-without-workflow)
     - [Update Comfyui and nodes](#update-comfyui-and-nodes)
     - [Chat Applications](#chat-applications)
-      - [Download Ollama Models with Lobe, Open UI and Chatbot-Ollama](#download-ollama-models-with-lobe-open-ui-and-chatbot-ollama)
+      - [Download Ollama Models with Chatbot-Ollama, Open UI and Lobe](#download-ollama-models-with-chatbot-ollama-open-ui-and-lobe)
       - [Use Ollama Models in Lobe](#use-ollama-models-in-lobe)
+    - [Download and use Ollama Models in Open WebUI](#download-and-use-ollama-models-in-open-webui)
   - [FAQ](#faq)
     - [Pinokio is damaged (Mac)](#pinokio-is-damaged-mac)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
@@ -65,6 +66,7 @@
     - [Gligen](#gligen)
     - [Supir](#supir)
     - [TripoSR](#triposr)
+    - [PhotoMaker](#photomaker)
     - [InstantID](#instantid)
     - [IP-Adapter-FaceID](#ip-adapter-faceid)
     - [Video2Densepose](#video2densepose)
@@ -451,7 +453,7 @@ To use these Applications with Ollama please:
 
 ---
 
-#### Download Ollama Models with Lobe, Open UI and Chatbot-Ollama
+#### Download Ollama Models with Chatbot-Ollama, Open UI and Lobe
 
 Ollama Models for these Applications can be downloaded on the left side menu.
 
@@ -517,6 +519,65 @@ Lobe Chat requires some more steps to use Ollama models
 
 5.) Start chatting
 ![Start chatting](Images/Lobe_use_model.png)
+
+---
+
+### Download and use Ollama Models in Open WebUI
+
+With Open WebUI it is possible to download Ollama models from their homepage and GGUF models from Huggingface.  
+All Models can be downloaded directly in Open WebUI Settings.  
+To download Ollama models with Open WebUI:
+
+- Click your ***Name*** at the bottom and select ***Settings*** in the menu
+- In the following window click ***Admin Settings***
+- Click ***Models*** and enter the name of your Model in the field *Pull a model from Ollama.com*
+  - The default name of a model always downloads the `latest` version of the model
+  - Different model versions can be downloaded by specifying their name (e.g. `llama3:instruct`)
+- ***click here*** leads to the full list of available models on the Ollama homepage
+- On the Ollama Home page click on a model to view the details
+- The dropdown menu displays all available versions with their size and name
+- Select your desired model version in the dropdown menu and copy its name on the right side
+- Paste the name in Open WebUI and press the download button
+  - A download bar displays the download progress
+  - A notification at the top will inform you when the download is successfully finished
+- Close the settings and select your model in the Model drop down menu at the top of the chat window
+- Now you can use your model and start chatting
+
+For further information please check the Open WebUI [Documentation](https://docs.openwebui.com/) or visit Open Webui
+on [GitHub](https://github.com/open-webui/open-webui) or [Discord](https://discord.gg/5rJgQTnV4s)
+
+1.) Click your Name and select Settings  
+![Settings](Images/OpenWebUI_Settings.png)
+
+2.) Click on Admin Settings
+![Admin Settings](Images/OpenWebUI_Admin-Settings.png)
+
+3.) Click Models and enter the Model name or *click here*  
+![Model name or *click here*](Images/OpenWebUI-Models.png)
+
+4.) Select a Model to view details and versions  
+![Select Model](Images/OpenWebUI_Ollama.png)
+
+5.) Click the dropdown menu and select *View more*  
+![Dropdown Menu - View more](Images/Ollama_dropdown.png)
+
+6.) Select your desired model version  
+![Select model version](Images/Ollama_model_version.png)
+
+7.) Copy the name  
+![Copy name](Images/Ollama_copy.png)
+
+8.) Paste the name in Open WebUI and press the download button
+![Paste, download, progress](Images/OpenWebUI_download.png)
+
+9.) Download finished notification  
+![Download finished notification](Images/OpenWebUI_success.png)
+
+10.) Select your model at the top of the chat window
+![Select your model](Images/OpenWebUI_select_model.png)
+
+11.) Start chatting
+![Start chatting](Images/OpenWebUI_use_model.png)
 
 ---
 
@@ -1042,11 +1103,24 @@ Make sure your image and video don't contain any NSFW or gore content, otherwise
 
   - NVIDIA 10GB VRAM, 24GB RAM  
 
+### PhotoMaker
+
+- **Supported Systems**:
+
+  - Window, Linux - NVIDIA, AMD, CPU
+  - Apple (Silicon) - MPS
+
+- **Minimal Requirements**:
+
+  - NVIDIA 12 GB VRAM
+  - M1 and above
+
 ### InstantID
 
 - **Supported Systems**:
 
   - Window, Linux - NVIDIA
+  - Apple (Silicon) - MPS
 
 - **Minimal Requirements**:
 
