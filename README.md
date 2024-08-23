@@ -57,6 +57,7 @@
     - [Cuda can't be installed](#cuda-cant-be-installed)
   - [Troubleshooting - Applications](#troubleshooting---applications)
     - [Module Not Found Error](#module-not-found-error)
+    - [Installation gets stuck at the beginning. White screen in Pinokio after restart](#installation-gets-stuck-at-the-beginning-white-screen-in-pinokio-after-restart)
     - [Facefusion doesn't launch after update](#facefusion-doesnt-launch-after-update)
     - [Facefusion launches - no video output](#facefusion-launches---no-video-output)
   - [Requirements (not verified)](#requirements-not-verified)
@@ -1015,6 +1016,24 @@ To fix this issue please:
 - Install the App again
 
 If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [pinokio-support][pisu] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
+
+### Installation gets stuck at the beginning. White screen in Pinokio after restart
+
+Applications with **SCRIPT VERSION 2.0** or higher are only supported on **Pinokio 2.0** or higher.  
+Earlier versions of Pinokio don't support all new features, resulting in a white screen.  
+*(The Script Version of Applications is displayed on the Discover page.)*  
+To resolve this issue:
+
+- Close Pinokio
+- Delete the folder of the App causing the problem (most likely the last one you installed)
+  - Let's say the last App you installed before you got the white screen was Comfyui,  
+    then you need to delete the folder `.\pinokio\api\comfy.git`
+- Download and install the latest version of Pinokio for your OS from the [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install)
+- After Pinokio has launched you can visit the Discover page and install the App again.
+  
+> **Note:** Upgrading Pinokio this way will **not** affect any of your previously installed Apps.  
+You can update and downgrade Pinokio at any time without affecting your applications.  
+Just make sure that your Pinokio version matches the script version of all your Applications!
 
 ### Facefusion doesn't launch after update
 
