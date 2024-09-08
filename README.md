@@ -31,7 +31,7 @@
     - [Chat Applications](#chat-applications)
       - [Download Ollama Models with Chatbot-Ollama, Open UI and Lobe](#download-ollama-models-with-chatbot-ollama-open-ui-and-lobe)
       - [Use Ollama Models in Lobe](#use-ollama-models-in-lobe)
-    - [Download and use Ollama Models in Open WebUI](#download-and-use-ollama-models-in-open-webui)
+      - [Download and use Ollama Models in Open WebUI](#download-and-use-ollama-models-in-open-webui)
   - [FAQ](#faq)
     - [Pinokio is damaged (Mac)](#pinokio-is-damaged-mac)
     - [What does ***"Do NOT use exFAT drives"*** on the Setting page mean?](#what-does-do-not-use-exfat-drives-on-the-setting-page-mean)
@@ -43,7 +43,6 @@
       - [How to install a python package with pip on Windows](#how-to-install-a-python-package-with-pip-on-windows)
   - [Troubleshooting - Pinokio](#troubleshooting---pinokio)
     - [White screen when visiting the Discover Page](#white-screen-when-visiting-the-discover-page)
-    - [White screen when downloading an Application](#white-screen-when-downloading-an-application)
     - [git, zip, conda: node.js can't be installed](#git-zip-conda-nodejs-cant-be-installed)
     - [Conda: ffmpeg, cmake can't be installed](#conda-ffmpeg-cmake-cant-be-installed)
     - [Visual Buildtools fails to install on Windows](#visual-buildtools-fails-to-install-on-windows)
@@ -57,7 +56,7 @@
     - [Cuda can't be installed](#cuda-cant-be-installed)
   - [Troubleshooting - Applications](#troubleshooting---applications)
     - [Module Not Found Error](#module-not-found-error)
-    - [Installation gets stuck at the beginning. White screen in Pinokio after restart](#installation-gets-stuck-at-the-beginning-white-screen-in-pinokio-after-restart)
+    - [Installation gets stuck at the beginning - White screen in Pinokio after restart](#installation-gets-stuck-at-the-beginning---white-screen-in-pinokio-after-restart)
     - [Facefusion doesn't launch after update](#facefusion-doesnt-launch-after-update)
     - [Facefusion launches - no video output](#facefusion-launches---no-video-output)
   - [Requirements (not verified)](#requirements-not-verified)
@@ -87,8 +86,7 @@
 
 - Please follow the instructions in [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install) to install Pinokio for [Windows](https://program.pinokio.computer/#/?id=windows), [Mac](https://program.pinokio.computer/#/?id=mac) or [Linux](https://program.pinokio.computer/#/?id=linux).
 
-> **Note:** Currently, **Pinokio is not supported on Win 11 Canary and Win 11 Dev build** since it causes a white screen when downloading Apps from the Discover Page or crashes Pinokio when trying to install the requirements.  
-> This crash is caused by ntdll.dll, a core Windows library. Despite numerous attempts to find a workaround for this problem, there is nothing that can be done. The only way to use Pinokio is to revert to a stable Windows 11 build.
+---
 
 ### Change the location where Apps are downloaded and installed (Home)
 
@@ -106,6 +104,8 @@ Once you've set your new location, click the *Save* button and wait until Pinoki
 Depending on the amount of files this may take some time.  
 **Don't abort** this process or turn off your computer until it has fully completed or Pinokio might not start properly next time.
 
+---
+
 ### Install Apps with Pinokio
 
 Visit the Discover page in Pinokio to install new Apps.  
@@ -114,11 +114,15 @@ Choose the default folder or set a new name for the App folder and click Downloa
 Once downloaded, the App appears on the main page of Pinokio.
 Select the App and click ***Install***.
 
+---
+
 ### Delete installed Apps
 
 The `api`  folder contains all your installed Apps. Just delete the according App.Pinokio.git folder in your explorer.  
 To delete an App simply go to `.\pinokio\api` If you don't know where to find this folder, just have a look at Pinokio - Settings (The wheel in the top right corner on the Pinokio main page).  
 Navigate there with your Explorer or File Manager and in there you will see the `api` folder.
+
+---
 
 ### Upgrade Pinokio
 
@@ -127,6 +131,8 @@ Navigate there with your Explorer or File Manager and in there you will see the 
 - Download and install Pinokio. This will replace your old Pinokio version with the new one without touching your installed Apps.
 
 > **Note:** Sometimes it is necessary to reset the `bin` folder (via Settings in Pinokio). This is a common fix for many other problems as well. As it flushes out any problematic packages that may be causing issues. It's generally recommended as the first fix for most problems. It won't affect the settings or saved files of any of your currently installed applications, but it will download and reinstall all necessary requirements again the first time you run an Application afterwards.
+
+---
 
 ### Uninstall Pinokio
 
@@ -142,6 +148,8 @@ This will only uninstall Pinokio ***not*** your Apps. Your Home directory will s
 - delete the `pinokio` folder containing the configuration files
   - On Windows: `C:\Users\<user>\AppData\Roaming\Pinokio`
   - On Macs: `~% /Users/<user>/Library/Application Support/Pinokio`
+
+---
 
 ### Report Bugs
 
@@ -178,6 +186,8 @@ The Home screen of Pinokio is divided in 2 sections.
 Currently running Apps are displayed with a green frame and a spinning circle at the top of the Home screen.  
 *Although it is **technically possible** to run more than one Application at the same time, it **isn't recommended** since most of the Apps have a significant performance consumption.*
 
+---
+
 ### Settings
 
 The settings page displays the currently installed Pinokio version and can be reached by clicking the wheel at the top right corner of the home screen.
@@ -189,6 +199,8 @@ Here you can:
   - View or delete the `bin` folder (deleting will remove all pre-requirements. They will be reinstalled with the next Application you install)
   - View or delete the `cache` folder (deleting will remove all temporary files and some default models. These models will be reloaded the next time the App that needs the model is launched)
   - View the `drive` folder (this is the location of files shared by Pinokio Applications to reduce disk space, such as python packages of the different environments and custom models, Loras, Upscaler and controlnet models used by Stable Diffusion based Apps)
+
+---
 
 ### Discover Page
 
@@ -211,6 +223,8 @@ All requirements will be installed with your first App.
 Applications not created by verified publishers and not tagged as ***Pinokio*** on GitHub don't appear on the Discover page. They can still be installed with the ***Download from URL*** button at the top of the Discover page.
 > **Note:** Only Applications with a `pinokio.js` and respective `install.json` or `install.js` and `start.json` or `start.js` scripts can be installed with Pinokio.  
 To find out if an Application on GitHub that doesn't appear on the Discover page can be installed with Pinokio, have a look on the GitHub repo and check for these scripts on the main page of the project.  
+
+---
 
 ### Application screen
 
@@ -252,6 +266,8 @@ The Files button leads to the Pinokio scripts, App-folder, subfolders and all co
 This should only be done in exceptional cases and with caution since a mistake can easily break the App.  
 *It's always wise to make a backup of the original files before modifying them.*
 > **Note: *A Factory Reset will delete all files and folders* in the App folder *including your output and custom models! Always* make sure to *save all important files and models beforehand*!**
+
+---
 
 ### Model and File Management
 
@@ -523,7 +539,7 @@ Lobe Chat requires some more steps to use Ollama models
 
 ---
 
-### Download and use Ollama Models in Open WebUI
+#### Download and use Ollama Models in Open WebUI
 
 With Open WebUI it is possible to download Ollama models from their homepage and GGUF models from Huggingface.  
 All Models can be downloaded directly in Open WebUI Settings.  
@@ -795,9 +811,7 @@ In some cases, an antivirus program, VPN, proxy, or firewall restrictions on a c
 - Restart Pinokio
 - Find the culprit and whitelist Pinokio or disable the responsible service while visiting the Discover Page
 
-### White screen when downloading an Application
-
-If you can visit the Discover Page, but get a white screen when you try to download an Application, then you are probably using Windows 11 Canary or a Windows 11 Dev build. Both versions are known to crash Pinokio or make it impossible to download Applications from the Discover Page. The only workaround is to revert to a stable Windows 11 build.
+---
 
 ### git, zip, conda: node.js can't be installed
 
@@ -1017,7 +1031,9 @@ To fix this issue please:
 
 If all these steps don't help, please visit the [Pinokio Discord Server][Disc] and post your problem in [pinokio-support][pisu] or hit the ***Report Bug button*** and post your logs.zip along with a screenshot of the error in the Terminal and a short description of the problem in the [forum][foru].
 
-### Installation gets stuck at the beginning. White screen in Pinokio after restart
+---
+
+### Installation gets stuck at the beginning - White screen in Pinokio after restart
 
 Applications with **SCRIPT VERSION 2.0** or higher are only supported on **Pinokio 2.0** or higher.  
 Earlier versions of Pinokio don't support all new features, resulting in a white screen.  
@@ -1034,6 +1050,8 @@ To resolve this issue:
 > **Note:** Upgrading Pinokio this way will **not** affect any of your previously installed Apps.  
 You can update and downgrade Pinokio at any time without affecting your applications.  
 Just make sure that your Pinokio version matches the script version of all your Applications!
+
+---
 
 ### Facefusion doesn't launch after update
 
