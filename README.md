@@ -84,7 +84,9 @@
 
 ### Install Pinokio
 
-Please follow the instructions in [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install) to install Pinokio for [Windows](https://program.pinokio.computer/#/?id=windows), [Mac](https://program.pinokio.computer/#/?id=mac) or [Linux](https://program.pinokio.computer/#/?id=linux).
+Please follow the instructions in [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install) to install Pinokio for [Windows](https://program.pinokio.computer/#/?id=windows), [Mac](https://program.pinokio.computer/#/?id=mac) or [Linux](https://program.pinokio.computer/#/?id=linux)
+
+> **Note:** Pinokio is compatible with all Win 10 and Win 11 versions. It is not supported on Win 8 and earlier versions of Windows.
 
 ---
 
