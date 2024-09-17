@@ -64,6 +64,7 @@
     - [Fooocus](#fooocus)
     - [ComfyUI](#comfyui)
     - [Gligen](#gligen)
+    - [Videocrafter 2](#videocrafter-2)
     - [Supir](#supir)
     - [TripoSR](#triposr)
     - [PhotoMaker](#photomaker)
@@ -1121,6 +1122,17 @@ Make sure your image and video don't contain any NSFW or gore content, otherwise
 
   - NVIDIA 4GB VRAM, 16GB RAM  
 
+### Videocrafter 2
+
+- Window, Linux - NVIDIA
+- Apple (Silicon) - MPS
+
+- **Minimal Requirements**:
+
+  - NVIDIA 16GB VRAM, 64GB RAM  
+    **Note:** Running Videocrafter with **less than the minimal requirements**  
+    will most likely **freeze your computer**. Please **be cautious**.
+
 ### Supir
 
 - **Supported Systems**:
@@ -1135,12 +1147,8 @@ Make sure your image and video don't contain any NSFW or gore content, otherwise
 
 - **Supported Systems**:
 
-  - Window, Linux - NVIDIA
   - Apple (Silicon) - MPS
-
-- **Minimal Requirements**:
-
-  - NVIDIA 10GB VRAM, 24GB RAM  
+  - Broke on NVIDIA due to torchmcubes
 
 ### PhotoMaker
 
