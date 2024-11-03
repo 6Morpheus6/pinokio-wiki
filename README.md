@@ -275,7 +275,7 @@ This should only be done in exceptional cases and with caution since a mistake c
 ### Model and File Management
 
 - Pinokio will be installed in
-  - `C:\Users\<user>\AppData\Programs\Pinokio` on Windows  
+  - `C:\Users\<user>\AppData\Local\Programs\Pinokio` on Windows  
   - `~% / Applications/` on Mac
 - Applications will be installed in `.\pinokio\api`
   - Each App has their very own Outputs and models folder.
