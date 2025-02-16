@@ -142,7 +142,7 @@ Navigate there with your Explorer or File Manager and in there you will see the 
 You can uninstall Pinokio like any other program on your system.  
 There is also an Uninstall Pinokio file in the same folder like the Pinokio program.  
 On Windows it is located in: `C:\Users\<user>\AppData\Local\Programs\Pinokio`  
-On a Mac it is in: `~% /Applications/`  
+On a Mac it is in: `/Applications/`  
 This will only uninstall Pinokio ***not*** your Apps. Your Home directory will stay ***untouched***.  
 
 **To remove Pinokio and all its components completely from your system, you also need to:**
@@ -150,7 +150,7 @@ This will only uninstall Pinokio ***not*** your Apps. Your Home directory will s
 - delete the `pinokio` folder of your home directory (you find its location in Pinokio - Settings)
 - delete the `pinokio` folder containing the configuration files
   - On Windows: `C:\Users\<user>\AppData\Roaming\Pinokio`
-  - On Macs: `~% /Users/<user>/Library/Application Support/Pinokio`
+  - On Macs: `/Users/<user>/Library/Application Support/Pinokio`
 
 ---
 
@@ -275,8 +275,11 @@ This should only be done in exceptional cases and with caution since a mistake c
 ### Model and File Management
 
 - Pinokio will be installed in
-  - `C:\Users\<user>\AppData\Local\Programs\Pinokio` on Windows  
-  - `~% / Applications/` on Mac
+  - `C:\Users\<user>\AppData\Local\Programs\Pinokio` on Windows
+  - `/Applications/` on Mac
+- Configuration files are located in
+  - `C:\Users\<user>\AppData\Roaming\Pinokio` on Windows
+  - `/Users/<user>/Library/Application Support/Pinokio` on Mac
 - Applications will be installed in `.\pinokio\api`
   - Each App has their very own Outputs and models folder.
     - Output folder contains all generated files
