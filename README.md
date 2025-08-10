@@ -130,7 +130,7 @@ Navigate there with your Explorer or File Manager and in there you will see the 
 ### Upgrade Pinokio
 
 - Close Pinokio if it is still open.
-- Visit the [Pinokio Tutorial](https://program.pinokio.computer/#/?id=install), select the link for your OS and press the ***Download*** button.
+- Visit the [Pinokio Tutorial](https://pinokio.co/docs/#/?id=install), select the link for your OS and press the ***Download*** button.
 - Download and install Pinokio. This will replace your old Pinokio version with the new one without touching your installed Apps.
 
 > **Note:** Sometimes it is necessary to reset the `bin` folder (via Settings in Pinokio). This is a common fix for many other problems as well. As it flushes out any problematic packages that may be causing issues. It's generally recommended as the first fix for most problems. It won't affect the settings or saved files of any of your currently installed applications, but it will download and reinstall all necessary requirements again the first time you run an Application afterwards.
